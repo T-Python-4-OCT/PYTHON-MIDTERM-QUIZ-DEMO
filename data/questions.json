@@ -1,0 +1,4545 @@
+[
+  {
+    "id": "u1l1q01",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.12,
+    "prompt": "Which command prints the current working directory in a POSIX shell?",
+    "options": [
+      "ls",
+      "mkdir",
+      "cd",
+      "pwd"
+    ],
+    "answer": 3,
+    "explanation": "`pwd` prints the absolute path of the working directory."
+  },
+  {
+    "id": "u1l1q02",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.14,
+    "prompt": "Which command creates a folder named lessons?",
+    "options": [
+      "mkdir lessons",
+      "cd lessons",
+      "ls lessons",
+      "touch lessons"
+    ],
+    "answer": 0,
+    "explanation": "`mkdir` creates a directory with the given name."
+  },
+  {
+    "id": "u1l1q03",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.17,
+    "prompt": "How does a CLI primarily accept commands?",
+    "options": [
+      "Graphical menus",
+      "Mouse gestures",
+      "Voice recordings",
+      "Typed text"
+    ],
+    "answer": 3,
+    "explanation": "A command-line interface accepts commands as text."
+  },
+  {
+    "id": "u1l1q04",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.23,
+    "prompt": "Which path is absolute on a POSIX system?",
+    "options": [
+      "project/main.py",
+      "../project",
+      "/home/lee/project",
+      "./project"
+    ],
+    "answer": 2,
+    "explanation": "An absolute POSIX path begins at `/`."
+  },
+  {
+    "id": "u1l1q05",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.22,
+    "prompt": "Which command lists entries in the current directory?",
+    "options": [
+      "pwd",
+      "mv",
+      "cat",
+      "ls"
+    ],
+    "answer": 3,
+    "explanation": "With no path argument, `ls` lists entries in the current directory."
+  },
+  {
+    "id": "u1l1q06",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.26,
+    "prompt": "Which command creates an empty notes.txt if it does not already exist?",
+    "options": [
+      "cat notes.txt",
+      "touch notes.txt",
+      "mkdir notes.txt",
+      "cd notes.txt"
+    ],
+    "answer": 1,
+    "explanation": "`touch` creates an empty file when the named file is missing."
+  },
+  {
+    "id": "u1l1q07",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.38,
+    "prompt": "You are in /work/app/src. Where does cd ../tests take you if the path exists?",
+    "options": [
+      "/work/app/src/tests",
+      "/work/tests",
+      "/work/app/tests",
+      "/tests"
+    ],
+    "answer": 2,
+    "explanation": "`..` moves up to `/work/app`, then `tests` selects its child."
+  },
+  {
+    "id": "u1l1q08",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.43,
+    "prompt": "Which command renames draft.py to final.py when final.py is absent?",
+    "options": [
+      "mv draft.py final.py",
+      "mv final.py draft.py",
+      "cp draft.py final.py",
+      "touch final.py"
+    ],
+    "answer": 0,
+    "explanation": "`mv` with a source and a new target name renames the source."
+  },
+  {
+    "id": "u1l1q09",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.47,
+    "prompt": "Which command enters a directory whose name is My Project?",
+    "options": [
+      "cd \"My Project\"",
+      "cd My Project",
+      "cd My/Project",
+      "cd \"My\" \"Project\""
+    ],
+    "answer": 0,
+    "explanation": "Quoting the name passes the space as part of one path argument."
+  },
+  {
+    "id": "u1l1q10",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.51,
+    "prompt": "Which command shows hidden entries such as .env along with regular entries?",
+    "options": [
+      "ls -l",
+      "ls -a",
+      "ls -r",
+      "ls -t"
+    ],
+    "answer": 1,
+    "explanation": "The `-a` option includes entries whose names start with a dot."
+  },
+  {
+    "id": "u1l1q11",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.48,
+    "prompt": "A folder named drafts is empty. Which command specifically removes empty directories?",
+    "options": [
+      "touch drafts",
+      "rmdir drafts",
+      "pwd drafts",
+      "rm drafts"
+    ],
+    "answer": 1,
+    "explanation": "`rmdir` removes directories only when they are empty."
+  },
+  {
+    "id": "u1l1q12",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.56,
+    "prompt": "You run cd .. in your editor’s integrated terminal. What changes immediately?",
+    "options": [
+      "The editor’s open project folder",
+      "That terminal’s working directory",
+      "The Python version chosen by the editor",
+      "The location of saved source files"
+    ],
+    "answer": 1,
+    "explanation": "`cd` changes the current directory of that shell session."
+  },
+  {
+    "id": "u1l1q13",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.71,
+    "prompt": "From /work/project/src, which command copies main.py into the existing /work/project/backup directory?",
+    "options": [
+      "cp ../main.py backup/",
+      "cp main.py ../../backup/",
+      "cp ../backup/ main.py",
+      "cp main.py ../backup/"
+    ],
+    "answer": 3,
+    "explanation": "`main.py` is in the current directory and `../backup/` is a sibling directory."
+  },
+  {
+    "id": "u1l1q14",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.77,
+    "prompt": "The directories tools and tools/scripts do not exist. Which command creates both in one step?",
+    "options": [
+      "touch tools/scripts",
+      "mkdir tools/scripts",
+      "mkdir -p tools/scripts",
+      "mkdir scripts tools"
+    ],
+    "answer": 2,
+    "explanation": "`mkdir -p` creates the missing parent directories along the given path."
+  },
+  {
+    "id": "u1l1q15",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.79,
+    "prompt": "From /course, what directory does the shell use after running cd examples && cd broken if examples exists but broken does not?",
+    "options": [
+      "/course/examples/broken",
+      "/course/examples",
+      "/",
+      "/course"
+    ],
+    "answer": 1,
+    "explanation": "The first `cd` succeeds and the second fails, leaving the shell in `examples`."
+  },
+  {
+    "id": "u1l1q16",
+    "unit": 1,
+    "lesson": 1,
+    "difficulty": 0.83,
+    "prompt": "The editor uses .venv/bin/python, but python3 in your POSIX terminal cannot find an installed package. What best checks the mismatch?",
+    "options": [
+      "Reopen the terminal without checking its interpreter.",
+      "Compare python3’s executable path with the editor’s interpreter path.",
+      "List hidden files in your home directory.",
+      "Compare the source file’s name with the package’s name."
+    ],
+    "answer": 1,
+    "explanation": "Different interpreter executables can use different installed packages."
+  },
+  {
+    "id": "u1l2q01",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.12,
+    "prompt": "What does a Git commit record?",
+    "options": [
+      "A copy of every file on the computer",
+      "A snapshot of staged changes",
+      "A deployment to a live website",
+      "A GitHub code review"
+    ],
+    "answer": 1,
+    "explanation": "A commit records the staged snapshot in the repository history."
+  },
+  {
+    "id": "u1l2q02",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.16,
+    "prompt": "Which command starts a Git repository in the current directory?",
+    "options": [
+      "git log",
+      "git pull",
+      "git push",
+      "git init"
+    ],
+    "answer": 3,
+    "explanation": "`git init` initializes a local repository."
+  },
+  {
+    "id": "u1l2q03",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.21,
+    "prompt": "Which command shows whether files are staged, modified, or untracked?",
+    "options": [
+      "git log",
+      "git clone",
+      "git init",
+      "git status"
+    ],
+    "answer": 3,
+    "explanation": "`git status` summarizes the working tree and staging area."
+  },
+  {
+    "id": "u1l2q04",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.19,
+    "prompt": "Which command stages notes.py for a future commit?",
+    "options": [
+      "git log notes.py",
+      "git branch notes.py",
+      "git push notes.py",
+      "git add notes.py"
+    ],
+    "answer": 3,
+    "explanation": "`git add` copies the current file content to the staging area."
+  },
+  {
+    "id": "u1l2q05",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.24,
+    "prompt": "Which command displays commit history?",
+    "options": [
+      "git status",
+      "git log",
+      "git add",
+      "git init"
+    ],
+    "answer": 1,
+    "explanation": "`git log` lists commits in the selected history."
+  },
+  {
+    "id": "u1l2q06",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.25,
+    "prompt": "What is the main purpose of a pull request on GitHub?",
+    "options": [
+      "Install the local Git tool",
+      "Rename every file in the repository",
+      "Automatically delete the default branch",
+      "Propose changes for review and merging"
+    ],
+    "answer": 3,
+    "explanation": "A pull request presents a branch’s changes for discussion and possible integration."
+  },
+  {
+    "id": "u1l2q07",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.36,
+    "prompt": "Which action obtains a local copy of a remote repository for the first time?",
+    "options": [
+      "git clone <url>",
+      "git push <url>",
+      "git status <url>",
+      "git init <url>"
+    ],
+    "answer": 0,
+    "explanation": "`git clone` copies the repository and configures its remote."
+  },
+  {
+    "id": "u1l2q08",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.41,
+    "prompt": "Which command creates a branch named quiz and switches to it?",
+    "options": [
+      "git branch quiz",
+      "git switch -c quiz",
+      "git log quiz",
+      "git switch quiz"
+    ],
+    "answer": 1,
+    "explanation": "`git switch -c` creates the branch and makes it current."
+  },
+  {
+    "id": "u1l2q09",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.46,
+    "prompt": "Which command lists configured Git remote names and URLs?",
+    "options": [
+      "git branch --list",
+      "git log --oneline",
+      "git remote -v",
+      "git status -s"
+    ],
+    "answer": 2,
+    "explanation": "`git remote -v` shows the configured fetch and push URLs."
+  },
+  {
+    "id": "u1l2q10",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.52,
+    "prompt": "You committed locally on a tracked branch. Which command publishes your new commits to its remote?",
+    "options": [
+      "git pull",
+      "git log",
+      "git add",
+      "git push"
+    ],
+    "answer": 3,
+    "explanation": "`git push` sends local commits to the configured upstream repository."
+  },
+  {
+    "id": "u1l2q11",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.54,
+    "prompt": "In a branch with no local changes, which command fetches and integrates the upstream changes?",
+    "options": [
+      "git init",
+      "git pull",
+      "git log",
+      "git push"
+    ],
+    "answer": 1,
+    "explanation": "`git pull` fetches changes and integrates them into the current branch."
+  },
+  {
+    "id": "u1l2q12",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.59,
+    "prompt": "When is a merge conflict most likely?",
+    "options": [
+      "Two developers clone the same repository.",
+      "Two branches change the same line in different ways.",
+      "Someone lists their branches during a review.",
+      "Two branches each add a differently named file."
+    ],
+    "answer": 1,
+    "explanation": "Git may need help selecting the final content when overlapping edits disagree."
+  },
+  {
+    "id": "u1l2q13",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.73,
+    "prompt": "You stage draft.py, edit it again, then make a regular git commit without staging again. What is saved?",
+    "options": [
+      "Both versions in one commit",
+      "The staged version",
+      "The latest working copy",
+      "Neither version"
+    ],
+    "answer": 1,
+    "explanation": "A regular commit uses the staged content as it existed at the last `git add`."
+  },
+  {
+    "id": "u1l2q14",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.77,
+    "prompt": "A pull request must update main using commits from feature/quiz. Which branch pairing is correct?",
+    "options": [
+      "Base main, compare main",
+      "Base feature/quiz, compare main",
+      "Base main, compare feature/quiz",
+      "Base feature/quiz, compare feature/quiz"
+    ],
+    "answer": 2,
+    "explanation": "The base receives changes from the compare branch."
+  },
+  {
+    "id": "u1l2q15",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.84,
+    "prompt": "During a regular merge, you resolve all conflict markers. What tells Git the edited file is resolved before completing the merge?",
+    "options": [
+      "Push before staging the file.",
+      "Rename the current branch.",
+      "Run git log on the file.",
+      "Stage the resolved file with git add."
+    ],
+    "answer": 3,
+    "explanation": "Staging the resolved content replaces Git’s unmerged entries for that file."
+  },
+  {
+    "id": "u1l2q16",
+    "unit": 1,
+    "lesson": 2,
+    "difficulty": 0.88,
+    "prompt": "A push is rejected because the remote branch contains newer commits. What preserves both sets of work?",
+    "options": [
+      "Force-push the current branch immediately.",
+      "Integrate the upstream commits locally, resolve conflicts if needed, then push.",
+      "Delete the remote branch and push again.",
+      "Stage the same files again and retry without fetching."
+    ],
+    "answer": 1,
+    "explanation": "Integrating upstream history makes both sets of commits reachable before pushing."
+  },
+  {
+    "id": "u1l3q01",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.1,
+    "prompt": "Which built-in displays text in the terminal?",
+    "options": [
+      "input()",
+      "type()",
+      "print()",
+      "float()"
+    ],
+    "answer": 2,
+    "explanation": "`print()` writes its arguments to standard output."
+  },
+  {
+    "id": "u1l3q02",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.15,
+    "prompt": "What is the type of the literal 3.5?",
+    "options": [
+      "int",
+      "float",
+      "str",
+      "bool"
+    ],
+    "answer": 1,
+    "explanation": "A numeric literal with a decimal point is a `float` here."
+  },
+  {
+    "id": "u1l3q03",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.19,
+    "prompt": "Which is a valid Python variable name?",
+    "options": [
+      "total price",
+      "total_price",
+      "total-price",
+      "2total"
+    ],
+    "answer": 1,
+    "explanation": "An identifier can contain letters and underscores, with digits allowed after the first character."
+  },
+  {
+    "id": "u1l3q04",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.23,
+    "prompt": "What does input() return when the user enters 42?",
+    "options": [
+      "The float 42.0",
+      "The boolean True",
+      "The integer 42",
+      "The string \"42\""
+    ],
+    "answer": 3,
+    "explanation": "`input()` returns the entered line as a string."
+  },
+  {
+    "id": "u1l3q05",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.24,
+    "prompt": "Which line is a Python comment?",
+    "options": [
+      "/* total so far */",
+      "# total so far",
+      "<!-- total so far -->",
+      "// total so far"
+    ],
+    "answer": 1,
+    "explanation": "Outside a string, `#` begins a comment that lasts to the end of the line."
+  },
+  {
+    "id": "u1l3q06",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.28,
+    "prompt": "What does the str in name: str = \"Ada\" express?",
+    "options": [
+      "A type hint for name",
+      "A request to print name",
+      "A command to read input",
+      "A comparison with str"
+    ],
+    "answer": 0,
+    "explanation": "The annotation communicates the intended type of `name`."
+  },
+  {
+    "id": "u1l3q07",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.37,
+    "prompt": "What is printed?",
+    "code": "print(7 // 2, 7 % 2)",
+    "options": [
+      "3 0",
+      "3 1",
+      "3.5 1",
+      "4 1"
+    ],
+    "answer": 1,
+    "explanation": "Floor division gives 3 and the remainder is 1."
+  },
+  {
+    "id": "u1l3q08",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.42,
+    "prompt": "What is printed?",
+    "code": "name = \"Ada\"\nprint(f\"Hi, {name}!\")",
+    "options": [
+      "Hi, {name}!",
+      "Hi, Ada!",
+      "Hi, name!",
+      "Ada Hi!"
+    ],
+    "answer": 1,
+    "explanation": "An f-string inserts the value of `name` where the braces appear."
+  },
+  {
+    "id": "u1l3q09",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.48,
+    "prompt": "What is the result of int(\"12\") + 3?",
+    "options": [
+      "TypeError",
+      "\"15\"",
+      "15",
+      "\"123\""
+    ],
+    "answer": 2,
+    "explanation": "Converting `\"12\"` to an integer allows numeric addition."
+  },
+  {
+    "id": "u1l3q10",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.49,
+    "prompt": "What is printed?",
+    "code": "print(\"go\" * 2 + \"!\")",
+    "options": [
+      "gogo!",
+      "go!go!",
+      "go2!",
+      "TypeError"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication repeats the string, and `+` appends `!`."
+  },
+  {
+    "id": "u1l3q11",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.54,
+    "prompt": "Which expression checks that age is at least 18 and below 65?",
+    "options": [
+      "age <= 18 and age > 65",
+      "age > 18 and age <= 65",
+      "age >= 18 and age < 65",
+      "age >= 18 or age < 65"
+    ],
+    "answer": 2,
+    "explanation": "Both comparisons must be true, and the range includes 18 while excluding 65."
+  },
+  {
+    "id": "u1l3q12",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.61,
+    "prompt": "What does bool(\"False\") return?",
+    "options": [
+      "True",
+      "ValueError",
+      "False",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "Any nonempty string is truthy, irrespective of its text."
+  },
+  {
+    "id": "u1l3q13",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.71,
+    "prompt": "What is printed?",
+    "code": "a = 4\nb = a\na = 9\nprint(b)",
+    "options": [
+      "None",
+      "9",
+      "4",
+      "NameError"
+    ],
+    "answer": 2,
+    "explanation": "Reassigning `a` leaves `b` bound to the original integer."
+  },
+  {
+    "id": "u1l3q14",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.76,
+    "prompt": "What is the result of -7 // 3?",
+    "options": [
+      "-1",
+      "-2",
+      "-3",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "Floor division rounds the quotient down toward negative infinity."
+  },
+  {
+    "id": "u1l3q15",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.83,
+    "prompt": "What does 2 + 3 * 2 ** 2 evaluate to?",
+    "options": [
+      "64",
+      "100",
+      "22",
+      "14"
+    ],
+    "answer": 3,
+    "explanation": "Exponentiation gives 4, multiplication gives 12, and addition gives 14."
+  },
+  {
+    "id": "u1l3q16",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.9,
+    "prompt": "What is printed?",
+    "code": "print(2 < 3 and not 4 == 4 or 5 % 2 == 1)",
+    "options": [
+      "False",
+      "TypeError",
+      "1",
+      "True"
+    ],
+    "answer": 3,
+    "explanation": "The `and` group is false, while `5 % 2 == 1` makes the `or` expression true."
+  },
+  {
+    "id": "u1l3q17",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.44,
+    "prompt": "Which command runs an existing Python 3 script named report.py from the current directory on macOS or Linux?",
+    "options": [
+      "python3 -m report.py",
+      "cd report.py",
+      "python3 report.py",
+      "pip report.py"
+    ],
+    "answer": 2,
+    "explanation": "Passing a file path to `python3` runs that script."
+  },
+  {
+    "id": "u1l3q18",
+    "unit": 1,
+    "lesson": 3,
+    "difficulty": 0.68,
+    "prompt": "What happens when Python evaluates int(\"3.5\")?",
+    "options": [
+      "It returns 3.",
+      "It returns 3.5.",
+      "It raises ValueError.",
+      "It returns the string \"3\"."
+    ],
+    "answer": 2,
+    "explanation": "`int()` requires an integer-form string when converting directly from text."
+  },
+  {
+    "id": "u1l4q01",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.12,
+    "prompt": "Which keyword introduces a fallback branch after an if statement?",
+    "options": [
+      "while",
+      "def",
+      "else",
+      "for"
+    ],
+    "answer": 2,
+    "explanation": "`else` runs when no earlier branch in that chain is selected."
+  },
+  {
+    "id": "u1l4q02",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.18,
+    "prompt": "What controls repetition in a while loop?",
+    "options": [
+      "A required range object",
+      "The current file name",
+      "The number of characters in the condition",
+      "A condition checked before each iteration"
+    ],
+    "answer": 3,
+    "explanation": "A `while` loop repeats while its condition evaluates to true."
+  },
+  {
+    "id": "u1l4q03",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.23,
+    "prompt": "Which values does range(3) produce?",
+    "options": [
+      "3",
+      "0, 1, 2",
+      "1, 2, 3",
+      "0, 1, 2, 3"
+    ],
+    "answer": 1,
+    "explanation": "`range(3)` starts at zero and stops before three."
+  },
+  {
+    "id": "u1l4q04",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.25,
+    "prompt": "Which loop header iterates over every element in scores?",
+    "options": [
+      "if score in scores:",
+      "for score in scores:",
+      "while score in scores:",
+      "for scores in len(scores):"
+    ],
+    "answer": 1,
+    "explanation": "A `for` loop binds `score` to each element in turn."
+  },
+  {
+    "id": "u1l4q05",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.27,
+    "prompt": "What does break do inside a loop?",
+    "options": [
+      "Exit the Python interpreter.",
+      "Restart the same loop.",
+      "Skip only the current iteration.",
+      "Exit the innermost loop."
+    ],
+    "answer": 3,
+    "explanation": "`break` terminates the closest enclosing loop."
+  },
+  {
+    "id": "u1l4q06",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.31,
+    "prompt": "Which keyword introduces an additional condition in an existing if chain?",
+    "options": [
+      "continue",
+      "pass",
+      "elif",
+      "else"
+    ],
+    "answer": 2,
+    "explanation": "`elif` checks another condition when previous branches fail."
+  },
+  {
+    "id": "u1l4q07",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.36,
+    "prompt": "What values are generated by range(2, 9, 3)?",
+    "options": [
+      "2, 5, 8",
+      "3, 6, 9",
+      "2, 3, 4, 5, 6, 7, 8",
+      "2, 5, 8, 11"
+    ],
+    "answer": 0,
+    "explanation": "The range starts at 2 and adds 3 while each value is below 9."
+  },
+  {
+    "id": "u1l4q08",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.43,
+    "prompt": "What is printed?",
+    "code": "for ch in \"cat\":\n    if ch == \"a\":\n        continue\n    print(ch, end=\"\")",
+    "options": [
+      "a",
+      "cat",
+      "ct",
+      "c"
+    ],
+    "answer": 2,
+    "explanation": "`continue` skips printing `a` and moves to the next character."
+  },
+  {
+    "id": "u1l4q09",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.46,
+    "prompt": "Which loop best fits a prompt that should repeat while the entered value is invalid?",
+    "options": [
+      "A while loop using validity as its condition",
+      "An if statement with no repetition",
+      "A for loop over a fixed range of three attempts",
+      "A for loop over the characters of the first entry"
+    ],
+    "answer": 0,
+    "explanation": "A `while` loop suits an unknown number of repeats controlled by validity."
+  },
+  {
+    "id": "u1l4q10",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.53,
+    "prompt": "What is printed?",
+    "code": "n = 3\nwhile n > 0:\n    n -= 1\nprint(n)",
+    "options": [
+      "3",
+      "0",
+      "1",
+      "-1"
+    ],
+    "answer": 1,
+    "explanation": "The loop decrements `n` until zero makes the condition false."
+  },
+  {
+    "id": "u1l4q11",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.55,
+    "prompt": "Which values does range(5, 1, -2) produce?",
+    "options": [
+      "5, 3, 1",
+      "No values",
+      "1, 3, 5",
+      "5, 3"
+    ],
+    "answer": 3,
+    "explanation": "The sequence decreases by 2 and excludes the stop value 1."
+  },
+  {
+    "id": "u1l4q12",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.6,
+    "prompt": "What is printed?",
+    "code": "x = 8\nif x > 4:\n    print(\"A\")\nelif x > 7:\n    print(\"B\")\nelse:\n    print(\"C\")",
+    "options": [
+      "B",
+      "A",
+      "A and B",
+      "C"
+    ],
+    "answer": 1,
+    "explanation": "The first true branch runs and the remaining branches are skipped."
+  },
+  {
+    "id": "u1l4q13",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.73,
+    "prompt": "What is printed?",
+    "code": "total = 0\nfor n in range(1, 6):\n    if n % 2 == 0:\n        total += n\nprint(total)",
+    "options": [
+      "15",
+      "9",
+      "12",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "Only 2 and 4 pass the even-number condition."
+  },
+  {
+    "id": "u1l4q14",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.79,
+    "prompt": "What is printed?",
+    "code": "count = 0\nfor i in range(3):\n    for j in range(i):\n        count += 1\nprint(count)",
+    "options": [
+      "0",
+      "3",
+      "9",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "The inner loop runs zero, one, then two times."
+  },
+  {
+    "id": "u1l4q15",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.82,
+    "prompt": "What is printed?",
+    "code": "n = 1\nwhile n < 10:\n    n *= 2\n    if n == 4:\n        break\nprint(n)",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "The loop exits as soon as doubling reaches 4."
+  },
+  {
+    "id": "u1l4q16",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.9,
+    "prompt": "What value is printed?",
+    "code": "x = 0\nfor i in range(4):\n    if i == 1:\n        continue\n    for j in range(3):\n        if j == i:\n            break\n        x += 1\nprint(x)",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "The inner loop contributes 0, 2, and 3 at outer values 0, 2, and 3."
+  },
+  {
+    "id": "u1l4q17",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.4,
+    "prompt": "Which condition admits only temperatures from 10 through 20 inclusive?",
+    "options": [
+      "temp <= 10 and temp >= 20",
+      "10 < temp < 20",
+      "temp >= 10 or temp <= 20",
+      "10 <= temp <= 20"
+    ],
+    "answer": 3,
+    "explanation": "The chained comparisons require both inclusive limits to hold."
+  },
+  {
+    "id": "u1l4q18",
+    "unit": 1,
+    "lesson": 4,
+    "difficulty": 0.66,
+    "prompt": "What is printed?",
+    "code": "n = 0\nwhile n < 5:\n    n += 2\nprint(n)",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "The loop checks after each increment, so the last value crosses the limit."
+  },
+  {
+    "id": "u1l5q01",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.12,
+    "prompt": "What keyword introduces a Python function definition?",
+    "options": [
+      "def",
+      "class",
+      "return",
+      "import"
+    ],
+    "answer": 0,
+    "explanation": "`def` defines a function and binds it to a name."
+  },
+  {
+    "id": "u1l5q02",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.16,
+    "prompt": "What is the name count in def report(count):?",
+    "options": [
+      "A module name",
+      "A return value",
+      "A parameter",
+      "A global variable by definition"
+    ],
+    "answer": 2,
+    "explanation": "A parameter is the name that receives an argument in a function call."
+  },
+  {
+    "id": "u1l5q03",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.21,
+    "prompt": "Which line sends a calculated value back to the caller?",
+    "options": [
+      "total = 0",
+      "return total",
+      "print(total)",
+      "def total():"
+    ],
+    "answer": 1,
+    "explanation": "`return` ends the call and provides the specified value."
+  },
+  {
+    "id": "u1l5q04",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.26,
+    "prompt": "Which line calls a previously defined function named greet with no parameters?",
+    "options": [
+      "return greet",
+      "greet()",
+      "greet",
+      "def greet():"
+    ],
+    "answer": 1,
+    "explanation": "Parentheses invoke the callable."
+  },
+  {
+    "id": "u1l5q05",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.24,
+    "prompt": "What does a normal function return if it reaches the end without a return statement?",
+    "options": [
+      "False",
+      "None",
+      "An empty string",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "Python supplies `None` when a function falls through its body."
+  },
+  {
+    "id": "u1l5q06",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.3,
+    "prompt": "Where is a name first assigned inside a function generally visible?",
+    "options": [
+      "Inside all functions in the same file",
+      "Inside that function invocation",
+      "Inside every module",
+      "Inside the terminal after the script exits"
+    ],
+    "answer": 1,
+    "explanation": "A local name belongs to the function’s local scope."
+  },
+  {
+    "id": "u1l5q07",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.4,
+    "prompt": "What is printed?",
+    "code": "def times(n, factor=2):\n    return n * factor\nprint(times(4))",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "TypeError"
+    ],
+    "answer": 2,
+    "explanation": "Omitting `factor` uses its default of 2."
+  },
+  {
+    "id": "u1l5q08",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.44,
+    "prompt": "For def volume(width, height):, what does volume(height=3, width=5) assign to width?",
+    "options": [
+      "5",
+      "3",
+      "It raises TypeError.",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "Keyword arguments bind by parameter name."
+  },
+  {
+    "id": "u1l5q09",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.49,
+    "prompt": "What is printed?",
+    "code": "def triple(n):\n    return 3 * n\nprint(triple(2) + triple(3))",
+    "options": [
+      "15",
+      "18",
+      "12",
+      "9"
+    ],
+    "answer": 0,
+    "explanation": "The calls return 6 and 9, which sum to 15."
+  },
+  {
+    "id": "u1l5q10",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.53,
+    "prompt": "Which decomposition keeps pricing logic reusable across a CLI and a web page?",
+    "options": [
+      "Store all prices in one mutable global variable.",
+      "Return a price from a calculation function.",
+      "Print the price directly in every caller.",
+      "Read a new prompt inside every calculation."
+    ],
+    "answer": 1,
+    "explanation": "A returned value lets each caller decide how to present the result."
+  },
+  {
+    "id": "u1l5q11",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.57,
+    "prompt": "What is printed?",
+    "code": "x = 9\ndef f():\n    x = 2\nf()\nprint(x)",
+    "options": [
+      "9",
+      "None",
+      "NameError",
+      "2"
+    ],
+    "answer": 0,
+    "explanation": "The assignment in `f` creates a local name and leaves the module name unchanged."
+  },
+  {
+    "id": "u1l5q12",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.61,
+    "prompt": "What is printed?",
+    "code": "def show():\n    print(\"Hi\")\nx = show()\nprint(x)",
+    "options": [
+      "Hi, then None",
+      "Hi, then Hi",
+      "None only",
+      "Hi only"
+    ],
+    "answer": 0,
+    "explanation": "`show()` prints `Hi` and implicitly returns `None`."
+  },
+  {
+    "id": "u1l5q13",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.74,
+    "prompt": "What is printed?",
+    "code": "def step(n):\n    if n > 1:\n        return n + 1\n    return n - 1\nprint(step(step(2)))",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "The inner call returns 3, and the outer call returns 4."
+  },
+  {
+    "id": "u1l5q14",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.8,
+    "prompt": "What happens?",
+    "code": "x = 4\ndef f():\n    x = x + 1\n    return x\nprint(f())",
+    "options": [
+      "It prints 5.",
+      "UnboundLocalError",
+      "It prints 4.",
+      "It prints None."
+    ],
+    "answer": 1,
+    "explanation": "Assignment makes `x` local in `f`, so its first read occurs before assignment."
+  },
+  {
+    "id": "u1l5q15",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.84,
+    "prompt": "What is printed?",
+    "code": "def combine(a, b=3, c=5):\n    return a * b + c\nprint(combine(2, c=4))",
+    "options": [
+      "10",
+      "11",
+      "TypeError",
+      "14"
+    ],
+    "answer": 0,
+    "explanation": "`a` is 2, the default `b` is 3, and `c` is set to 4."
+  },
+  {
+    "id": "u1l5q16",
+    "unit": 1,
+    "lesson": 5,
+    "difficulty": 0.9,
+    "prompt": "What is printed?",
+    "code": "x = 6\ndef read():\n    return x\ndef run(x):\n    return read() + x\nprint(run(2))",
+    "options": [
+      "NameError",
+      "4",
+      "12",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "`read()` uses the module’s `x`, while `run()` uses its parameter."
+  },
+  {
+    "id": "u1l6q01",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.11,
+    "prompt": "Which literal creates an empty list?",
+    "options": [
+      "set()",
+      "{}",
+      "()",
+      "[]"
+    ],
+    "answer": 3,
+    "explanation": "Square brackets with no elements create an empty list."
+  },
+  {
+    "id": "u1l6q02",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.15,
+    "prompt": "Which method adds one item to the end of a list?",
+    "options": [
+      "split()",
+      "lower()",
+      "append()",
+      "keys()"
+    ],
+    "answer": 2,
+    "explanation": "`append()` adds its argument as one element."
+  },
+  {
+    "id": "u1l6q03",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.19,
+    "prompt": "Which collection stores entries by key?",
+    "options": [
+      "Dictionary",
+      "List",
+      "Set",
+      "Tuple"
+    ],
+    "answer": 0,
+    "explanation": "A dictionary maps keys to values."
+  },
+  {
+    "id": "u1l6q04",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.2,
+    "prompt": "Which collection is ideal for keeping distinct tags without caring about order?",
+    "options": [
+      "String",
+      "List",
+      "Tuple",
+      "Set"
+    ],
+    "answer": 3,
+    "explanation": "Sets store unique elements and have no guaranteed iteration order."
+  },
+  {
+    "id": "u1l6q05",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.23,
+    "prompt": "Which collection is ordered and immutable?",
+    "options": [
+      "Dictionary",
+      "List",
+      "Tuple",
+      "Set"
+    ],
+    "answer": 2,
+    "explanation": "A tuple retains element order and prevents replacing its entries."
+  },
+  {
+    "id": "u1l6q06",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.27,
+    "prompt": "What is [8, 9, 10][0]?",
+    "options": [
+      "10",
+      "9",
+      "8",
+      "IndexError"
+    ],
+    "answer": 2,
+    "explanation": "List indexing starts at zero."
+  },
+  {
+    "id": "u1l6q07",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.36,
+    "prompt": "What does [4, 8, 12, 16][1:3] produce?",
+    "options": [
+      "[8, 12, 16]",
+      "[8, 12]",
+      "[12, 16]",
+      "[4, 8, 12]"
+    ],
+    "answer": 1,
+    "explanation": "The slice includes index 1 and excludes index 3."
+  },
+  {
+    "id": "u1l6q08",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.43,
+    "prompt": "What does {\"x\": 3}.get(\"y\", 0) return?",
+    "options": [
+      "None",
+      "3",
+      "0",
+      "KeyError"
+    ],
+    "answer": 2,
+    "explanation": "`get()` returns the supplied default when the key is missing."
+  },
+  {
+    "id": "u1l6q09",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.46,
+    "prompt": "What is the result of {1, 2, 3} & {2, 4}?",
+    "options": [
+      "{1, 2, 3, 4}",
+      "{1, 3}",
+      "{2}",
+      "{1, 3, 4}"
+    ],
+    "answer": 2,
+    "explanation": "`&` returns the common members of both sets."
+  },
+  {
+    "id": "u1l6q10",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.5,
+    "prompt": "Which loop header unpacks each dictionary key and value into separate names?",
+    "options": [
+      "for key, value in record.values():",
+      "for key, value in record.items():",
+      "for key, value in record.keys():",
+      "for key, value in list(record):"
+    ],
+    "answer": 1,
+    "explanation": "`items()` provides `(key, value)` pairs."
+  },
+  {
+    "id": "u1l6q11",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.55,
+    "prompt": "What is printed?",
+    "code": "a, b = (\"red\", \"blue\")\nprint(b, a)",
+    "options": [
+      "red blue",
+      "('red', 'blue')",
+      "blue red",
+      "ValueError"
+    ],
+    "answer": 2,
+    "explanation": "Unpacking assigns the second item to `b`, which is printed first."
+  },
+  {
+    "id": "u1l6q12",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.58,
+    "prompt": "What does [\"a\", \"b\", \"c\"][-2] return?",
+    "options": [
+      "\"a\"",
+      "\"c\"",
+      "IndexError",
+      "\"b\""
+    ],
+    "answer": 3,
+    "explanation": "Index `-2` selects the second item from the end."
+  },
+  {
+    "id": "u1l6q13",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.72,
+    "prompt": "What is printed?",
+    "code": "a = [1, 2]\nb = a\nb.append(3)\nprint(a)",
+    "options": [
+      "[3]",
+      "[1, 2, 3]",
+      "[1, 2]",
+      "None"
+    ],
+    "answer": 1,
+    "explanation": "Both names refer to the same list, so appending through `b` changes it."
+  },
+  {
+    "id": "u1l6q14",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.79,
+    "prompt": "What is printed?",
+    "code": "items = [1, 2, 3]\ncopy = items[:]\ncopy[0] = 8\nprint(items[0])",
+    "options": [
+      "1",
+      "IndexError",
+      "2",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "A full slice creates a new list, so replacing a slot in it leaves the original alone."
+  },
+  {
+    "id": "u1l6q15",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.84,
+    "prompt": "What is printed?",
+    "code": "counts = {}\nfor ch in \"aba\":\n    counts[ch] = counts.get(ch, 0) + 1\nprint(counts[\"a\"] - counts[\"b\"])",
+    "options": [
+      "3",
+      "0",
+      "1",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "The loop counts two `a` entries and one `b` entry."
+  },
+  {
+    "id": "u1l6q16",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.9,
+    "prompt": "What is printed?",
+    "code": "pair = ([1], 2)\npair[0].append(3)\nprint(pair[0])",
+    "options": [
+      "[1]",
+      "[1, 3]",
+      "TypeError",
+      "(1, 3)"
+    ],
+    "answer": 1,
+    "explanation": "The tuple still holds the same mutable list, whose contents can change."
+  },
+  {
+    "id": "u1l6q17",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.43,
+    "prompt": "Which literal creates a one-item tuple containing 7?",
+    "options": [
+      "[7]",
+      "(7)",
+      "(7,)",
+      "{7}"
+    ],
+    "answer": 2,
+    "explanation": "The trailing comma makes `(7,)` a tuple."
+  },
+  {
+    "id": "u1l6q18",
+    "unit": 1,
+    "lesson": 6,
+    "difficulty": 0.63,
+    "prompt": "What does {1, 2, 3} - {2, 4} produce?",
+    "options": [
+      "{1, 3, 4}",
+      "{1, 2, 3, 4}",
+      "{1, 3}",
+      "{2}"
+    ],
+    "answer": 2,
+    "explanation": "Set difference retains the left-hand elements absent from the right-hand set."
+  },
+  {
+    "id": "u1l7q01",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.12,
+    "prompt": "What does import math make available under the name math?",
+    "options": [
+      "A file handle",
+      "A directory string",
+      "A module",
+      "A list"
+    ],
+    "answer": 2,
+    "explanation": "`import math` binds the imported module to the name `math`."
+  },
+  {
+    "id": "u1l7q02",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.16,
+    "prompt": "Which mode opens an existing text file for reading?",
+    "options": [
+      "\"r\"",
+      "\"w\"",
+      "\"a\"",
+      "\"x\""
+    ],
+    "answer": 0,
+    "explanation": "`\"r\"` opens a file for reading and is the default mode."
+  },
+  {
+    "id": "u1l7q03",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.2,
+    "prompt": "Which mode appends data while keeping existing text?",
+    "options": [
+      "\"x\"",
+      "\"w\"",
+      "\"a\"",
+      "\"r\""
+    ],
+    "answer": 2,
+    "explanation": "Append mode directs writes to the end of the file."
+  },
+  {
+    "id": "u1l7q04",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.23,
+    "prompt": "What does with open(...) as file: do when its block exits?",
+    "options": [
+      "It rewinds the file to the start.",
+      "It deletes the file.",
+      "It closes the file.",
+      "It renames the file."
+    ],
+    "answer": 2,
+    "explanation": "The file context manager closes the handle when the block exits."
+  },
+  {
+    "id": "u1l7q05",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.25,
+    "prompt": "What does a Python package help organize?",
+    "options": [
+      "Related modules",
+      "Runtime error messages",
+      "Individual characters in a file",
+      "Terminal history"
+    ],
+    "answer": 0,
+    "explanation": "Packages group related modules under a shared import namespace."
+  },
+  {
+    "id": "u1l7q06",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.29,
+    "prompt": "Which call returns the current working directory as a string?",
+    "options": [
+      "os.remove()",
+      "os.getcwd()",
+      "os.chdir()",
+      "os.mkdir()"
+    ],
+    "answer": 1,
+    "explanation": "`os.getcwd()` reports the working directory of the process."
+  },
+  {
+    "id": "u1l7q07",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.37,
+    "prompt": "How do you access sqrt after import math?",
+    "options": [
+      "math(9).sqrt",
+      "math.sqrt(9)",
+      "sqrt.math(9)",
+      "sqrt(9)"
+    ],
+    "answer": 1,
+    "explanation": "The function is accessed as an attribute of the imported module."
+  },
+  {
+    "id": "u1l7q08",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.41,
+    "prompt": "Which import lets you call sqrt(9) directly?",
+    "options": [
+      "from math import sqrt",
+      "import math as sqrt",
+      "import math",
+      "from math import pi"
+    ],
+    "answer": 0,
+    "explanation": "A `from` import binds the selected function directly in the current namespace."
+  },
+  {
+    "id": "u1l7q09",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.49,
+    "prompt": "What happens when an existing file is opened with mode \"w\"?",
+    "options": [
+      "Its previous contents are cleared.",
+      "It is opened for reading only.",
+      "Python always raises FileExistsError.",
+      "The file pointer goes to the end and keeps the original contents."
+    ],
+    "answer": 0,
+    "explanation": "Opening an existing file in write mode truncates it immediately."
+  },
+  {
+    "id": "u1l7q10",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.53,
+    "prompt": "Which call joins the two directory names using the platform’s path conventions?",
+    "options": [
+      "os.listdir(\"data\", \"reports\")",
+      "os.chdir(\"data\", \"reports\")",
+      "os.path.join(\"data\", \"reports\")",
+      "os.getcwd(\"data\", \"reports\")"
+    ],
+    "answer": 2,
+    "explanation": "`os.path.join()` builds a path from the provided components."
+  },
+  {
+    "id": "u1l7q11",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.56,
+    "prompt": "Which mode creates a file only if its name does not already exist?",
+    "options": [
+      "\"x\"",
+      "\"a\"",
+      "\"r\"",
+      "\"w\""
+    ],
+    "answer": 0,
+    "explanation": "Exclusive creation mode raises `FileExistsError` for an existing path."
+  },
+  {
+    "id": "u1l7q12",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.6,
+    "prompt": "Which declaration makes helpers.formatter available under the local name fmt?",
+    "options": [
+      "import helpers as formatter",
+      "import fmt as helpers.formatter",
+      "from fmt import helpers.formatter",
+      "import helpers.formatter as fmt"
+    ],
+    "answer": 3,
+    "explanation": "The `as` clause binds the imported submodule directly to `fmt`."
+  },
+  {
+    "id": "u1l7q13",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.74,
+    "prompt": "A text file contains ABC. What does the second call return?",
+    "code": "with open(\"letters.txt\") as f:\n    f.read(2)\n    result = f.read()",
+    "options": [
+      "\"\"",
+      "\"ABC\"",
+      "\"AB\"",
+      "\"C\""
+    ],
+    "answer": 3,
+    "explanation": "The first read advances the position by two characters, leaving `C`."
+  },
+  {
+    "id": "u1l7q14",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.79,
+    "prompt": "With the working directory /course, you run python3 src/run.py. The script opens data.txt using a plain relative path. Where does it look?",
+    "options": [
+      "/course/src/data.txt",
+      "/course/src/run.py/data.txt",
+      "/course/data.txt",
+      "/data.txt"
+    ],
+    "answer": 2,
+    "explanation": "Relative file paths are resolved against the process’s working directory."
+  },
+  {
+    "id": "u1l7q15",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.83,
+    "prompt": "A UTF-8 file has the two lines A and B, both ending with a newline. What is returned by the second call?",
+    "code": "with open(\"labels.txt\", encoding=\"utf-8\") as f:\n    f.readline()\n    value = f.readline().strip()",
+    "options": [
+      "\"B\"",
+      "\"A B\"",
+      "\"A\"",
+      "\"\""
+    ],
+    "answer": 0,
+    "explanation": "The second `readline()` gets the second line and `strip()` removes its newline."
+  },
+  {
+    "id": "u1l7q16",
+    "unit": 1,
+    "lesson": 7,
+    "difficulty": 0.88,
+    "prompt": "Which expression creates a path to data.json alongside the current script, regardless of the working directory?",
+    "options": [
+      "Path(\"data.json\").resolve()",
+      "Path(__file__).resolve().parent / \"data.json\"",
+      "Path(__file__) / \"data.json\"",
+      "Path.cwd() / \"data.json\""
+    ],
+    "answer": 1,
+    "explanation": "Resolving `__file__` and taking its parent gives the script’s directory."
+  },
+  {
+    "id": "u1l8q01",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.13,
+    "prompt": "What is a base case in recursion?",
+    "options": [
+      "A copy of the function name",
+      "A condition that returns without another recursive call",
+      "The first call made by another module",
+      "A required exception handler"
+    ],
+    "answer": 1,
+    "explanation": "A base case stops the recursive chain."
+  },
+  {
+    "id": "u1l8q02",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.17,
+    "prompt": "What does a lambda expression produce?",
+    "options": [
+      "A callable function",
+      "A class instance of str",
+      "A loop",
+      "A file object"
+    ],
+    "answer": 0,
+    "explanation": "A lambda expression creates a small anonymous function."
+  },
+  {
+    "id": "u1l8q03",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.23,
+    "prompt": "Which block handles a matching exception from a try block?",
+    "options": [
+      "finally",
+      "return",
+      "except",
+      "else"
+    ],
+    "answer": 2,
+    "explanation": "`except` handles the exception types named in its clause."
+  },
+  {
+    "id": "u1l8q04",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.25,
+    "prompt": "Which clause is used for cleanup whether a try block succeeds or raises an exception?",
+    "options": [
+      "else",
+      "except",
+      "lambda",
+      "finally"
+    ],
+    "answer": 3,
+    "explanation": "`finally` runs during normal exit and while an exception unwinds."
+  },
+  {
+    "id": "u1l8q05",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.27,
+    "prompt": "What is a decorator commonly used for?",
+    "options": [
+      "Declare a file’s text encoding.",
+      "Automatically turn all loops into recursion.",
+      "Wrap or extend a function’s behavior.",
+      "Create a new directory."
+    ],
+    "answer": 2,
+    "explanation": "A decorator receives a callable and can replace it with a wrapper."
+  },
+  {
+    "id": "u1l8q06",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.29,
+    "prompt": "What does lambda n: n + 1 return when called with 4?",
+    "options": [
+      "4",
+      "TypeError",
+      "5",
+      "None"
+    ],
+    "answer": 2,
+    "explanation": "The lambda’s expression evaluates to 5 for this argument."
+  },
+  {
+    "id": "u1l8q07",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.39,
+    "prompt": "What does f(3) return?",
+    "code": "def f(n):\n    if n == 0:\n        return 0\n    return n + f(n - 1)",
+    "options": [
+      "1",
+      "0",
+      "6",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "The calls add 3, 2, and 1 before returning the base value of zero."
+  },
+  {
+    "id": "u1l8q08",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.45,
+    "prompt": "Which exception is raised by int(\"abc\")?",
+    "options": [
+      "TypeError",
+      "IndexError",
+      "KeyError",
+      "ValueError"
+    ],
+    "answer": 3,
+    "explanation": "The string has an acceptable type but an invalid integer value."
+  },
+  {
+    "id": "u1l8q09",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.49,
+    "prompt": "When does a try statement’s else block execute?",
+    "options": [
+      "Before the try block starts",
+      "Whenever finally raises an error",
+      "When the try block completes normally",
+      "Only when an exception is handled"
+    ],
+    "answer": 2,
+    "explanation": "`else` runs after normal completion of the `try` block."
+  },
+  {
+    "id": "u1l8q10",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.54,
+    "prompt": "Which lambda sorts pairs by their second element when used as a sort key?",
+    "options": [
+      "lambda pair: pair[1]",
+      "lambda pair: pair",
+      "lambda pair: pair[0]",
+      "lambda pair: len(pair)"
+    ],
+    "answer": 0,
+    "explanation": "Index 1 extracts the second element for comparison."
+  },
+  {
+    "id": "u1l8q11",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.58,
+    "prompt": "What is the usual result of recursion that never reaches a base case and keeps nesting calls?",
+    "options": [
+      "RecursionError",
+      "The function automatically converts to a loop.",
+      "Python returns the last argument.",
+      "KeyError"
+    ],
+    "answer": 0,
+    "explanation": "Python limits call depth to prevent unbounded recursion."
+  },
+  {
+    "id": "u1l8q12",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.62,
+    "prompt": "What assignment corresponds to putting @trace above a function definition named greet?",
+    "options": [
+      "greet = trace(greet())",
+      "greet = trace(greet)",
+      "trace = greet(trace)",
+      "trace = greet"
+    ],
+    "answer": 1,
+    "explanation": "The decorator is applied to the function object after definition."
+  },
+  {
+    "id": "u1l8q13",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.73,
+    "prompt": "What is printed?",
+    "code": "try:\n    print(int(\"x\"))\nexcept ValueError:\n    print(\"A\", end=\"\")\nelse:\n    print(\"B\", end=\"\")\nfinally:\n    print(\"C\", end=\"\")",
+    "options": [
+      "BC",
+      "AC",
+      "ABC",
+      "A"
+    ],
+    "answer": 1,
+    "explanation": "The `ValueError` selects the handler, then `finally` runs."
+  },
+  {
+    "id": "u1l8q14",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.79,
+    "prompt": "What does steps(7) return?",
+    "code": "def steps(n):\n    if n <= 1:\n        return 0\n    return 1 + steps(n // 2)",
+    "options": [
+      "7",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "The calls follow 7, then 3, then 1, counting two steps."
+  },
+  {
+    "id": "u1l8q15",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.85,
+    "prompt": "What is printed?",
+    "code": "def double(fn):\n    def wrapper():\n        return fn() * 2\n    return wrapper\n\n@double\ndef points():\n    return 3\n\nprint(points())",
+    "options": [
+      "9",
+      "3",
+      "6",
+      "TypeError"
+    ],
+    "answer": 2,
+    "explanation": "The decorator replaces `points` with a wrapper that doubles its return value."
+  },
+  {
+    "id": "u1l8q16",
+    "unit": 1,
+    "lesson": 8,
+    "difficulty": 0.9,
+    "prompt": "What does run() return?",
+    "code": "def run():\n    try:\n        return 1\n    finally:\n        return 2",
+    "options": [
+      "1",
+      "None",
+      "2",
+      "It raises RuntimeError."
+    ],
+    "answer": 2,
+    "explanation": "The `return` in `finally` replaces the pending return from `try`."
+  },
+  {
+    "id": "u1l9q01",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.12,
+    "prompt": "Which keyword defines a Python class?",
+    "options": [
+      "instance",
+      "new",
+      "class",
+      "object"
+    ],
+    "answer": 2,
+    "explanation": "The `class` statement defines a class."
+  },
+  {
+    "id": "u1l9q02",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.17,
+    "prompt": "What is an instance?",
+    "options": [
+      "The source file containing a class",
+      "A copy of all class definitions",
+      "An object created from a class",
+      "A method’s return type"
+    ],
+    "answer": 2,
+    "explanation": "Instantiating a class creates an individual object of that class."
+  },
+  {
+    "id": "u1l9q03",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.21,
+    "prompt": "Which method initializes instance state during normal construction?",
+    "options": [
+      "__str__",
+      "__init__",
+      "__repr__",
+      "__len__"
+    ],
+    "answer": 1,
+    "explanation": "Python calls `__init__` to initialize a newly constructed instance."
+  },
+  {
+    "id": "u1l9q04",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.23,
+    "prompt": "What does self usually refer to in an instance method?",
+    "options": [
+      "The module containing the class",
+      "The parent class",
+      "The instance receiving the call",
+      "The method name"
+    ],
+    "answer": 2,
+    "explanation": "When called on an instance, a bound method receives that instance as `self`."
+  },
+  {
+    "id": "u1l9q05",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.25,
+    "prompt": "Which declaration creates a subclass of Account?",
+    "options": [
+      "def Savings(Account):",
+      "Savings = Account()",
+      "class Savings(Account):",
+      "class Account(Savings):"
+    ],
+    "answer": 2,
+    "explanation": "The base class appears in parentheses after the subclass name."
+  },
+  {
+    "id": "u1l9q06",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.28,
+    "prompt": "What is a method?",
+    "options": [
+      "A package containing one class",
+      "A function defined to provide behavior on a class or instance",
+      "A local variable inside a loop",
+      "A mandatory attribute containing an integer"
+    ],
+    "answer": 1,
+    "explanation": "Methods define operations available through a class or its instances."
+  },
+  {
+    "id": "u1l9q07",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.37,
+    "prompt": "Which line in __init__ keeps the supplied name on the instance?",
+    "options": [
+      "self.name = name",
+      "print(name)",
+      "return name",
+      "name = name"
+    ],
+    "answer": 0,
+    "explanation": "Assignment through `self` stores the name as an instance attribute."
+  },
+  {
+    "id": "u1l9q08",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.43,
+    "prompt": "What is printed?",
+    "code": "class Dog:\n    def speak(self):\n        return \"woof\"\nprint(Dog().speak())",
+    "options": [
+      "woof",
+      "None",
+      "Dog",
+      "TypeError"
+    ],
+    "answer": 0,
+    "explanation": "The bound `speak` method returns the string `\"woof\"`."
+  },
+  {
+    "id": "u1l9q09",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.48,
+    "prompt": "Which choice best encapsulates a bank account’s withdrawal rules?",
+    "options": [
+      "Put balance checks inside a withdraw method.",
+      "Use a separate global variable for every account.",
+      "Accept a balance value from each caller and store it blindly.",
+      "Repeat the checks in each screen that changes balance."
+    ],
+    "answer": 0,
+    "explanation": "A method centralizes checks that govern changes to account state."
+  },
+  {
+    "id": "u1l9q10",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.52,
+    "prompt": "What does super().__init__(name) normally let a subclass do?",
+    "options": [
+      "Create a second unrelated instance.",
+      "Delete the parent class.",
+      "Skip all inherited behavior.",
+      "Use inherited initialization for name."
+    ],
+    "answer": 3,
+    "explanation": "`super()` can call the inherited initializer on the current instance."
+  },
+  {
+    "id": "u1l9q11",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.56,
+    "prompt": "What is printed?",
+    "code": "class Box:\n    def __init__(self, size):\n        self.size = size\na = Box(2)\nb = Box(5)\nprint(a.size + b.size)",
+    "options": [
+      "10",
+      "5",
+      "4",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "Each instance retains its own size, and the two sizes are added."
+  },
+  {
+    "id": "u1l9q12",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.6,
+    "prompt": "If a subclass defines its own instance method with the same name as the base method, what usually happens when called on the subclass instance?",
+    "options": [
+      "Both versions are called automatically.",
+      "Class construction fails.",
+      "The subclass version runs.",
+      "The base version always runs."
+    ],
+    "answer": 2,
+    "explanation": "Method lookup finds the overriding definition on the subclass first."
+  },
+  {
+    "id": "u1l9q13",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.72,
+    "prompt": "What is printed?",
+    "code": "class Counter:\n    def __init__(self):\n        self.value = 0\n    def add(self):\n        self.value += 1\nc = Counter()\nd = c\nd.add()\nprint(c.value)",
+    "options": [
+      "1",
+      "AttributeError",
+      "2",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "`c` and `d` refer to the same counter, so both see the updated value."
+  },
+  {
+    "id": "u1l9q14",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.78,
+    "prompt": "What is printed?",
+    "code": "class Base:\n    def label(self):\n        return \"B\"\nclass Child(Base):\n    def label(self):\n        return super().label() + \"C\"\nprint(Child().label())",
+    "options": [
+      "CB",
+      "C",
+      "B",
+      "BC"
+    ],
+    "answer": 3,
+    "explanation": "The override calls the base method and appends `C`."
+  },
+  {
+    "id": "u1l9q15",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.85,
+    "prompt": "What is printed?",
+    "code": "class Item:\n    label = \"base\"\na, b = Item(), Item()\na.label = \"one\"\nprint(a.label, b.label)",
+    "options": [
+      "base one",
+      "one base",
+      "one one",
+      "base base"
+    ],
+    "answer": 1,
+    "explanation": "`a` has its own label, while `b` reads the class attribute."
+  },
+  {
+    "id": "u1l9q16",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.9,
+    "prompt": "What is printed?",
+    "code": "class Bag:\n    items = []\nx, y = Bag(), Bag()\nx.items.append(\"pen\")\nprint(len(y.items))",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "AttributeError"
+    ],
+    "answer": 0,
+    "explanation": "The list is a class attribute shared by both instances."
+  },
+  {
+    "id": "u1l9q17",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.47,
+    "prompt": "Which relationship best fits a Cart that contains Product objects?",
+    "options": [
+      "Make Product inherit from Cart.",
+      "Store Product objects as attributes of the cart.",
+      "Make Cart inherit from Product.",
+      "Make both classes share one global product field."
+    ],
+    "answer": 1,
+    "explanation": "The cart has products, so composition models the relationship directly."
+  },
+  {
+    "id": "u1l9q18",
+    "unit": 1,
+    "lesson": 9,
+    "difficulty": 0.65,
+    "prompt": "Which method signature normally accepts an instance and one explicit amount argument?",
+    "options": [
+      "def deposit(self, amount):",
+      "def deposit(self):",
+      "def deposit(amount):",
+      "def deposit(self, amount, currency):"
+    ],
+    "answer": 0,
+    "explanation": "A bound call supplies the instance and the caller supplies `amount`."
+  },
+  {
+    "id": "u1l10q01",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.12,
+    "prompt": "What is the main purpose of a Python virtual environment?",
+    "options": [
+      "Create a new operating system user.",
+      "Replace the project’s version control history.",
+      "Automatically upload source to GitHub.",
+      "Isolate a project’s installed dependencies."
+    ],
+    "answer": 3,
+    "explanation": "A virtual environment gives a project its own package installation context."
+  },
+  {
+    "id": "u1l10q02",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.17,
+    "prompt": "Which command creates a virtual environment named .venv using Python 3?",
+    "options": [
+      "cd .venv",
+      "python3 -m pip .venv",
+      "python3 -m venv .venv",
+      "pip install .venv"
+    ],
+    "answer": 2,
+    "explanation": "The `venv` module creates the isolated environment at the given path."
+  },
+  {
+    "id": "u1l10q03",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.21,
+    "prompt": "What tool usually installs Python packages from package indexes?",
+    "options": [
+      "pwd",
+      "git",
+      "pip",
+      "venv"
+    ],
+    "answer": 2,
+    "explanation": "`pip` resolves and installs Python distributions."
+  },
+  {
+    "id": "u1l10q04",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.23,
+    "prompt": "What command typically exits an activated virtual environment?",
+    "options": [
+      "exit venv",
+      "deactivate",
+      "pip uninstall venv",
+      "git reset"
+    ],
+    "answer": 1,
+    "explanation": "The activation script supplies `deactivate` to restore the shell’s previous settings."
+  },
+  {
+    "id": "u1l10q05",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.25,
+    "prompt": "What does a requirements.txt commonly record?",
+    "options": [
+      "Dependencies to install for the project",
+      "Shell navigation history",
+      "All Python syntax errors",
+      "The project’s Git remotes"
+    ],
+    "answer": 0,
+    "explanation": "A requirements file lists dependency specifications that pip can install."
+  },
+  {
+    "id": "u1l10q06",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.28,
+    "prompt": "Which command lists packages installed for the selected python interpreter?",
+    "options": [
+      "python -m pip install",
+      "python -m pip list",
+      "python -m pip check",
+      "python -m venv list"
+    ],
+    "answer": 1,
+    "explanation": "`pip list` shows installed distributions and their versions."
+  },
+  {
+    "id": "u1l10q07",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.4,
+    "prompt": "What command activates .venv in Bash or Zsh on macOS or Linux?",
+    "options": [
+      "pip activate .venv",
+      "source .venv/bin/activate",
+      "cd .venv/bin/activate",
+      "python3 .venv/bin/activate"
+    ],
+    "answer": 1,
+    "explanation": "Sourcing the activation script changes the current shell’s environment."
+  },
+  {
+    "id": "u1l10q08",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.45,
+    "prompt": "Which command installs the packages listed in requirements.txt?",
+    "options": [
+      "python -m pip list -r requirements.txt",
+      "python -m venv requirements.txt",
+      "python -m pip install -r requirements.txt",
+      "python requirements.txt"
+    ],
+    "answer": 2,
+    "explanation": "The `-r` flag tells pip to read requirements from a file."
+  },
+  {
+    "id": "u1l10q09",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.49,
+    "prompt": "What does package==2.1.0 require?",
+    "options": [
+      "Only versions below 2.1.0",
+      "Any newer version",
+      "Exactly version 2.1.0",
+      "Any version in major release 2"
+    ],
+    "answer": 2,
+    "explanation": "The `==` operator pins a dependency to the specified version."
+  },
+  {
+    "id": "u1l10q10",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.53,
+    "prompt": "Which command writes the active environment’s installed package pins into requirements.txt in a POSIX shell?",
+    "options": [
+      "python -m pip show requirements.txt",
+      "python -m venv > requirements.txt",
+      "python -m pip freeze > requirements.txt",
+      "python -m pip install > requirements.txt"
+    ],
+    "answer": 2,
+    "explanation": "`pip freeze` outputs requirement lines and `>` redirects them to the file."
+  },
+  {
+    "id": "u1l10q11",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.57,
+    "prompt": "Which step minimizes the chance that pip and the script use different Python installations?",
+    "options": [
+      "Run pip from the project’s parent folder.",
+      "Rename requirements.txt to main.py.",
+      "Start two terminal windows.",
+      "Invoke both via the same Python executable."
+    ],
+    "answer": 3,
+    "explanation": "`python -m pip` runs pip through the Python interpreter that will execute the script."
+  },
+  {
+    "id": "u1l10q12",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.61,
+    "prompt": "What does python -m pip show requests provide when requests is installed?",
+    "options": [
+      "The source of every project that imports requests",
+      "All files created by the Python interpreter",
+      "The package index account password",
+      "Package metadata such as version and location"
+    ],
+    "answer": 3,
+    "explanation": "`pip show` displays metadata for a named installed distribution."
+  },
+  {
+    "id": "u1l10q13",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.74,
+    "prompt": "Two projects require incompatible versions of a library. How can both run on the same machine?",
+    "options": [
+      "Run both scripts from one folder.",
+      "Install both versions into the same environment under the same distribution name.",
+      "Create a virtual environment for each project.",
+      "Install the newer version globally and remove requirements files."
+    ],
+    "answer": 2,
+    "explanation": "Separate environments let each project use its compatible dependency versions."
+  },
+  {
+    "id": "u1l10q14",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.78,
+    "prompt": "On POSIX, how can you launch app.py with .venv without activating it first?",
+    "options": [
+      "python3 .venv app.py",
+      "source app.py .venv",
+      "pip exec .venv app.py",
+      ".venv/bin/python app.py"
+    ],
+    "answer": 3,
+    "explanation": "Invoking the environment’s Python executable directly uses that environment."
+  },
+  {
+    "id": "u1l10q15",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.84,
+    "prompt": "A teammate clones a project with requirements.txt and no virtual environment directory. What should they do locally?",
+    "options": [
+      "Create an environment and install the requirements with its Python.",
+      "Run pip freeze before installing anything.",
+      "Copy the author’s absolute Python path into the project.",
+      "Rename requirements.txt to .venv."
+    ],
+    "answer": 0,
+    "explanation": "Recreating the environment from dependency specifications avoids machine-specific paths."
+  },
+  {
+    "id": "u1l10q16",
+    "unit": 1,
+    "lesson": 10,
+    "difficulty": 0.89,
+    "prompt": "You freshly install requirements in .venv, but your editor’s Run command reports ModuleNotFoundError. Which check most directly identifies a likely mismatch?",
+    "options": [
+      "Check whether requirements.txt has an empty last line.",
+      "Compare the project folder’s name with the dependency’s version.",
+      "Compare the executable used by the editor with .venv’s interpreter.",
+      "List Git branches in the editor."
+    ],
+    "answer": 2,
+    "explanation": "The editor can run a different interpreter from the one that received the package."
+  },
+  {
+    "id": "u2l1q01",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.12,
+    "prompt": "Which component usually sends a request when you visit a website?",
+    "options": [
+      "The website’s database",
+      "The browser",
+      "The response body",
+      "The HTML heading"
+    ],
+    "answer": 1,
+    "explanation": "The browser acts as the client and initiates the request."
+  },
+  {
+    "id": "u2l1q02",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.17,
+    "prompt": "Which protocol commonly carries web requests and responses?",
+    "options": [
+      "HTTP",
+      "CSS",
+      "SQL",
+      "HTML"
+    ],
+    "answer": 0,
+    "explanation": "HTTP defines how clients and servers exchange web messages."
+  },
+  {
+    "id": "u2l1q03",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.21,
+    "prompt": "What usually sends the HTTP response back to the browser?",
+    "options": [
+      "A web server",
+      "A text editor",
+      "A CSS selector",
+      "The browser’s address bar"
+    ],
+    "answer": 0,
+    "explanation": "The server returns a response to a request from the browser."
+  },
+  {
+    "id": "u2l1q04",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.23,
+    "prompt": "Which part of a common HTTP response carries the returned HTML document?",
+    "options": [
+      "The HTTP method",
+      "The domain name",
+      "The response body",
+      "The request path"
+    ],
+    "answer": 2,
+    "explanation": "A response body carries the returned representation, such as HTML."
+  },
+  {
+    "id": "u2l1q05",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.26,
+    "prompt": "What does DNS typically find for a website’s hostname?",
+    "options": [
+      "Its HTML heading",
+      "Its database table names",
+      "Its current HTTP status",
+      "Its IP address"
+    ],
+    "answer": 3,
+    "explanation": "DNS resolves names to records such as IP addresses used to reach hosts."
+  },
+  {
+    "id": "u2l1q06",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.29,
+    "prompt": "Which HTTP status typically means a requested resource was not found?",
+    "options": [
+      "201",
+      "301",
+      "200",
+      "404"
+    ],
+    "answer": 3,
+    "explanation": "`404` indicates that the requested resource could not be found."
+  },
+  {
+    "id": "u2l1q07",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.37,
+    "prompt": "In https://example.com/courses?id=7, which part is the path?",
+    "options": [
+      "example.com",
+      "id=7",
+      "https",
+      "/courses"
+    ],
+    "answer": 3,
+    "explanation": "The path follows the host and precedes the query string."
+  },
+  {
+    "id": "u2l1q08",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.42,
+    "prompt": "Which activity generally belongs to a backend when displaying a student’s saved enrollment?",
+    "options": [
+      "Paint the text onto the student’s display.",
+      "Read enrollment data from persistent storage.",
+      "Set the browser tab’s zoom level.",
+      "Choose the student’s browser window size."
+    ],
+    "answer": 1,
+    "explanation": "The backend can retrieve stored data and include it in the response."
+  },
+  {
+    "id": "u2l1q09",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.48,
+    "prompt": "What commonly happens when a browser receives HTML referencing an uncached image on the same site?",
+    "options": [
+      "It opens the database directly.",
+      "It makes a separate request for the image.",
+      "The original response changes into an image.",
+      "It must reload the HTML until the image appears."
+    ],
+    "answer": 1,
+    "explanation": "The image URL identifies a resource the browser fetches separately."
+  },
+  {
+    "id": "u2l1q10",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.53,
+    "prompt": "Which HTTP method is designed to retrieve a representation of a resource?",
+    "options": [
+      "PUT",
+      "POST",
+      "DELETE",
+      "GET"
+    ],
+    "answer": 3,
+    "explanation": "`GET` asks the server to return a representation of the target resource."
+  },
+  {
+    "id": "u2l1q11",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.57,
+    "prompt": "What does HTTPS add to ordinary HTTP communication?",
+    "options": [
+      "A public copy of the server’s database",
+      "A guarantee that a site’s claims are true",
+      "Automatic compression of every image",
+      "TLS protection for data in transit"
+    ],
+    "answer": 3,
+    "explanation": "HTTPS uses TLS to protect the connection’s traffic."
+  },
+  {
+    "id": "u2l1q12",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.61,
+    "prompt": "If the browser gets status 500, which conclusion follows?",
+    "options": [
+      "It received a response that reports a server-side error.",
+      "The requested path definitely returned 404.",
+      "The browser rejected its own stylesheet.",
+      "It never connected to anything."
+    ],
+    "answer": 0,
+    "explanation": "`500` is a server error status carried in an HTTP response."
+  },
+  {
+    "id": "u2l1q13",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.73,
+    "prompt": "The page document returns 200, but its /logo.png request returns 404. Which symptom fits?",
+    "options": [
+      "The entire server failed to respond.",
+      "The page document must also be 404.",
+      "The page can load while the image is missing.",
+      "The browser cannot use the page title."
+    ],
+    "answer": 2,
+    "explanation": "The document and its linked image are requested independently."
+  },
+  {
+    "id": "u2l1q14",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.78,
+    "prompt": "A browser receives 302 with Location: /sign-in. What commonly happens next for a normal navigation?",
+    "options": [
+      "The browser treats /sign-in as a response body.",
+      "DNS resolves the hostname /sign-in.",
+      "The browser makes another request to /sign-in.",
+      "The server edits the original request path in the browser."
+    ],
+    "answer": 2,
+    "explanation": "The redirect directs the client to a different URL via the `Location` header."
+  },
+  {
+    "id": "u2l1q15",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.84,
+    "prompt": "Two requests to /dashboard produce different HTML for two signed-in users. Where can this response difference originate?",
+    "options": [
+      "HTTP requires a unique path for every user.",
+      "DNS generates the personalized dashboard HTML.",
+      "The browser changes the bytes the server already sent.",
+      "The backend can use request identity to select data before rendering."
+    ],
+    "answer": 3,
+    "explanation": "Backend logic can generate distinct bodies for requests to the same URL."
+  },
+  {
+    "id": "u2l1q16",
+    "unit": 2,
+    "lesson": 1,
+    "difficulty": 0.89,
+    "prompt": "Which sequence best describes a first HTTPS visit with no cached DNS answer or open connection?",
+    "options": [
+      "Read the response body, resolve DNS, send the HTTP request, establish TLS.",
+      "Resolve the hostname, establish a secure connection, send an HTTP request, receive a response.",
+      "Send an HTTP request, receive HTML, resolve the hostname, establish TLS.",
+      "Establish TLS, receive HTML, send the HTTP request, resolve DNS."
+    ],
+    "answer": 1,
+    "explanation": "The client finds the host and establishes its secure connection before sending its HTTP request."
+  },
+  {
+    "id": "u2l2q01",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.12,
+    "prompt": "Which element represents the main content of a document?",
+    "options": [
+      "<meta>",
+      "<main>",
+      "<title>",
+      "<head>"
+    ],
+    "answer": 1,
+    "explanation": "`<main>` identifies the page’s dominant content."
+  },
+  {
+    "id": "u2l2q02",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.16,
+    "prompt": "Which attribute sets the destination of a link?",
+    "options": [
+      "href",
+      "src",
+      "for",
+      "alt"
+    ],
+    "answer": 0,
+    "explanation": "An anchor’s `href` specifies the destination URL."
+  },
+  {
+    "id": "u2l2q03",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.21,
+    "prompt": "Which element defines an ordered list?",
+    "options": [
+      "<li>",
+      "<ol>",
+      "<p>",
+      "<ul>"
+    ],
+    "answer": 1,
+    "explanation": "`<ol>` marks a list whose item order is meaningful."
+  },
+  {
+    "id": "u2l2q04",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.22,
+    "prompt": "Which element typically contains the document’s metadata and title?",
+    "options": [
+      "<main>",
+      "<header>",
+      "<footer>",
+      "<head>"
+    ],
+    "answer": 3,
+    "explanation": "`<head>` holds metadata such as `<title>`."
+  },
+  {
+    "id": "u2l2q05",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.26,
+    "prompt": "Which element creates a paragraph?",
+    "options": [
+      "<h1>",
+      "<li>",
+      "<span>",
+      "<p>"
+    ],
+    "answer": 3,
+    "explanation": "`<p>` represents a paragraph of text."
+  },
+  {
+    "id": "u2l2q06",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.3,
+    "prompt": "Which image attribute provides its text alternative?",
+    "options": [
+      "href",
+      "name",
+      "title",
+      "alt"
+    ],
+    "answer": 3,
+    "explanation": "The `alt` attribute provides equivalent text for an image."
+  },
+  {
+    "id": "u2l2q07",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.4,
+    "prompt": "Which pair correctly connects a label to its input?",
+    "options": [
+      "<label id=\"email\">Email</label><input for=\"email\">",
+      "<label name=\"email\">Email</label><input id=\"mail\">",
+      "<label for=\"email\">Email</label><input id=\"email\">",
+      "<label for=\"email\">Email</label><input name=\"email\">"
+    ],
+    "answer": 2,
+    "explanation": "A label’s `for` value references the control’s `id`."
+  },
+  {
+    "id": "u2l2q08",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.46,
+    "prompt": "Which field is built for email entry and performs basic browser email-format validation when nonempty?",
+    "options": [
+      "<input type=\"email\">",
+      "<input type=\"text\">",
+      "<input type=\"tel\">",
+      "<input type=\"url\">"
+    ],
+    "answer": 0,
+    "explanation": "An email input applies the browser’s email-format checks at form submission."
+  },
+  {
+    "id": "u2l2q09",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.49,
+    "prompt": "Which element groups a page’s primary navigation links semantically?",
+    "options": [
+      "<article>",
+      "<aside>",
+      "<blockquote>",
+      "<nav>"
+    ],
+    "answer": 3,
+    "explanation": "`<nav>` represents a section devoted to navigation links."
+  },
+  {
+    "id": "u2l2q10",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.53,
+    "prompt": "Which expression correctly provides a relative image URL and useful alternative text?",
+    "options": [
+      "<img src=\"img/map.png\" title=\"Map of campus\">",
+      "<img src=\"img/map.png\" alt=\"Map of campus\">",
+      "<img href=\"img/map.png\" alt=\"Map of campus\">",
+      "<a src=\"img/map.png\">Map of campus</a>"
+    ],
+    "answer": 1,
+    "explanation": "`src` identifies the image to fetch and `alt` provides its text alternative."
+  },
+  {
+    "id": "u2l2q11",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.58,
+    "prompt": "Which element adds a browser-provided playback interface for a sound file?",
+    "options": [
+      "<source controls src=\"intro.mp3\">",
+      "<audio controls src=\"intro.mp3\"></audio>",
+      "<img controls src=\"intro.mp3\">",
+      "<a controls href=\"intro.mp3\">Intro</a>"
+    ],
+    "answer": 1,
+    "explanation": "The `<audio>` element’s `controls` attribute enables native playback controls."
+  },
+  {
+    "id": "u2l2q12",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.62,
+    "prompt": "Which form attribute specifies the URL to which the browser submits the data?",
+    "options": [
+      "method",
+      "id",
+      "name",
+      "action"
+    ],
+    "answer": 3,
+    "explanation": "`action` supplies the form’s submission destination."
+  },
+  {
+    "id": "u2l2q13",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.73,
+    "prompt": "A form has <input id=\"city\" name=\"office\" value=\"Riyadh\">. Which name and value are submitted?",
+    "options": [
+      "id=city",
+      "office=Riyadh",
+      "city=Riyadh",
+      "Riyadh=office"
+    ],
+    "answer": 1,
+    "explanation": "The control’s `name` becomes the submitted key and its current value becomes the value."
+  },
+  {
+    "id": "u2l2q14",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.79,
+    "prompt": "You want choosing one option to deselect the other in a two-option radio group. What should the inputs share within the same form?",
+    "options": [
+      "Their label text",
+      "Their id",
+      "Their value",
+      "Their name"
+    ],
+    "answer": 3,
+    "explanation": "Radio controls with the same name in a form act as one selection group."
+  },
+  {
+    "id": "u2l2q15",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.84,
+    "prompt": "A button inside a form should run local JavaScript without submitting the form. Which attribute expresses that?",
+    "options": [
+      "name=\"button\"",
+      "type=\"reset\"",
+      "type=\"submit\"",
+      "type=\"button\""
+    ],
+    "answer": 3,
+    "explanation": "Setting `type=\"button\"` removes the default submit action."
+  },
+  {
+    "id": "u2l2q16",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.89,
+    "prompt": "Which field is included when this form is submitted?",
+    "code": "<input name=\"a\" value=\"1\" disabled>\n<input id=\"b\" value=\"2\">\n<input name=\"c\" value=\"3\" readonly>",
+    "options": [
+      "a=1, b=2, and c=3",
+      "b=2 and c=3",
+      "c=3 only",
+      "a=1 and c=3"
+    ],
+    "answer": 2,
+    "explanation": "Disabled or unnamed fields are skipped, while a named readonly field is submitted."
+  },
+  {
+    "id": "u2l2q17",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.42,
+    "prompt": "Which attribute on a text field prevents normal form submission while the field is empty?",
+    "options": [
+      "required",
+      "readonly",
+      "placeholder",
+      "autocomplete"
+    ],
+    "answer": 0,
+    "explanation": "`required` makes an empty field fail browser validation."
+  },
+  {
+    "id": "u2l2q18",
+    "unit": 2,
+    "lesson": 2,
+    "difficulty": 0.69,
+    "prompt": "Which HTML attribute points a link at the element with id=\"schedule\" on the same page?",
+    "options": [
+      "href=\"#schedule\"",
+      "href=\"schedule\"",
+      "src=\"#schedule\"",
+      "for=\"schedule\""
+    ],
+    "answer": 0,
+    "explanation": "The URL fragment locates the matching ID within the document."
+  },
+  {
+    "id": "u2l3q01",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.12,
+    "prompt": "Which selector targets elements with class=\"notice\"?",
+    "options": [
+      ".notice",
+      "#notice",
+      "notice",
+      "*notice"
+    ],
+    "answer": 0,
+    "explanation": "A leading dot selects a CSS class."
+  },
+  {
+    "id": "u2l3q02",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.18,
+    "prompt": "Which property changes text color?",
+    "options": [
+      "border-color",
+      "background-color",
+      "color",
+      "font-size"
+    ],
+    "answer": 2,
+    "explanation": "`color` sets the foreground color used by text."
+  },
+  {
+    "id": "u2l3q03",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.21,
+    "prompt": "Which property controls space between content and its border?",
+    "options": [
+      "margin",
+      "line-height",
+      "padding",
+      "outline"
+    ],
+    "answer": 2,
+    "explanation": "Padding sits inside the border around the content box."
+  },
+  {
+    "id": "u2l3q04",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.25,
+    "prompt": "Which display value creates a flex formatting context for children?",
+    "options": [
+      "none",
+      "flex",
+      "inline",
+      "block"
+    ],
+    "answer": 1,
+    "explanation": "`display: flex` makes the element a flex container."
+  },
+  {
+    "id": "u2l3q05",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.27,
+    "prompt": "What is a practical benefit of a CSS component library?",
+    "options": [
+      "Reuse consistent styling patterns.",
+      "Automatically choose database keys.",
+      "Replace the need to write HTML.",
+      "Install Django dependencies."
+    ],
+    "answer": 0,
+    "explanation": "Libraries provide repeatable utilities or component styles."
+  },
+  {
+    "id": "u2l3q06",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.3,
+    "prompt": "Which property controls the size of text?",
+    "options": [
+      "font-size",
+      "font-family",
+      "font-weight",
+      "text-align"
+    ],
+    "answer": 0,
+    "explanation": "`font-size` sets the text’s character size."
+  },
+  {
+    "id": "u2l3q07",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.4,
+    "prompt": "Which query applies a rule when the viewport is 600px wide or narrower?",
+    "options": [
+      "@media (width: 601px)",
+      "@media (min-width: 600px)",
+      "@media (min-height: 600px)",
+      "@media (max-width: 600px)"
+    ],
+    "answer": 3,
+    "explanation": "`max-width` includes widths up to and including 600px."
+  },
+  {
+    "id": "u2l3q08",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.44,
+    "prompt": "Which declaration helps a wide image shrink within a narrower parent while preserving its aspect ratio?",
+    "options": [
+      "max-width: 100%; height: auto;",
+      "width: 120%; height: 200px;",
+      "min-width: 1200px; height: auto;",
+      "max-width: none; height: 100%;"
+    ],
+    "answer": 0,
+    "explanation": "The maximum width limits overflow and automatic height follows the intrinsic ratio."
+  },
+  {
+    "id": "u2l3q09",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.49,
+    "prompt": "Which selector normally has the most specificity among these options?",
+    "options": [
+      "p",
+      ".notice",
+      "#notice",
+      "*"
+    ],
+    "answer": 2,
+    "explanation": "An ID selector has higher specificity than a class, type, or universal selector."
+  },
+  {
+    "id": "u2l3q10",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.54,
+    "prompt": "Which property can smoothly blend background-color between normal and hover states?",
+    "options": [
+      "transition",
+      "display",
+      "margin",
+      "font-weight"
+    ],
+    "answer": 0,
+    "explanation": "A `transition` animates a change between property values."
+  },
+  {
+    "id": "u2l3q11",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.58,
+    "prompt": "Which property introduces spacing between grid items without giving each item a margin?",
+    "options": [
+      "gap",
+      "width",
+      "outline",
+      "font-size"
+    ],
+    "answer": 0,
+    "explanation": "`gap` creates gutters between grid tracks."
+  },
+  {
+    "id": "u2l3q12",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.62,
+    "prompt": "Which syntax defines the stages of a CSS animation?",
+    "options": [
+      "@keyframes fade",
+      ".fade:hover",
+      "@media fade",
+      "@font-face fade"
+    ],
+    "answer": 0,
+    "explanation": "`@keyframes` declares the styles at points in an animation."
+  },
+  {
+    "id": "u2l3q13",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.74,
+    "prompt": "A 200px-wide block uses box-sizing: border-box, 10px padding on each side, and 2px borders. What is its border-box width?",
+    "options": [
+      "224px",
+      "176px",
+      "220px",
+      "200px"
+    ],
+    "answer": 3,
+    "explanation": "With `border-box`, declared width includes padding and borders."
+  },
+  {
+    "id": "u2l3q14",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.8,
+    "prompt": "What color does <p class=\"note\"> use if these are the only rules?",
+    "code": "p { color: blue; }\n.note { color: green; }\np { color: red; }",
+    "options": [
+      "green",
+      "black",
+      "blue",
+      "red"
+    ],
+    "answer": 0,
+    "explanation": "The class selector is more specific than either type selector."
+  },
+  {
+    "id": "u2l3q15",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.84,
+    "prompt": "With an 800px viewport, which layout wins?",
+    "code": ".cards { display: grid; }\n@media (max-width: 900px) { .cards { display: flex; } }\n@media (max-width: 600px) { .cards { display: block; } }",
+    "options": [
+      "flex",
+      "grid",
+      "none",
+      "block"
+    ],
+    "answer": 0,
+    "explanation": "The 900px rule applies and takes precedence over the equally specific earlier rule."
+  },
+  {
+    "id": "u2l3q16",
+    "unit": 2,
+    "lesson": 3,
+    "difficulty": 0.89,
+    "prompt": "A library button style and your override use the same selector and importance in the same cascade layer. How can your override win?",
+    "options": [
+      "Move the override before the library without changing anything else.",
+      "Repeat the library’s unchanged declaration three times.",
+      "Load your declaration after the library’s.",
+      "Load your declaration first."
+    ],
+    "answer": 2,
+    "explanation": "Source order breaks the tie when relevant cascade priorities are equal."
+  },
+  {
+    "id": "u2l4q01",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.12,
+    "prompt": "What is Django?",
+    "options": [
+      "A browser rendering engine",
+      "A database file format",
+      "An HTML element library",
+      "A Python web framework"
+    ],
+    "answer": 3,
+    "explanation": "Django provides tools for building web applications with Python."
+  },
+  {
+    "id": "u2l4q02",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.17,
+    "prompt": "Which command creates a Django project named portal after Django is installed?",
+    "options": [
+      "python manage.py runserver portal",
+      "pip install portal",
+      "django-admin startproject portal",
+      "django-admin startapp portal"
+    ],
+    "answer": 2,
+    "explanation": "`startproject` generates the initial Django project structure."
+  },
+  {
+    "id": "u2l4q03",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.22,
+    "prompt": "Which command normally starts the development server from the folder containing manage.py?",
+    "options": [
+      "python manage.py startapp",
+      "python manage.py shell",
+      "python manage.py startproject",
+      "python manage.py runserver"
+    ],
+    "answer": 3,
+    "explanation": "`runserver` starts Django’s local development server."
+  },
+  {
+    "id": "u2l4q04",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.24,
+    "prompt": "Which generated file holds project settings?",
+    "options": [
+      "urls.py",
+      "settings.py",
+      "manage.py",
+      "__init__.py"
+    ],
+    "answer": 1,
+    "explanation": "`settings.py` stores the project’s Django configuration."
+  },
+  {
+    "id": "u2l4q05",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.26,
+    "prompt": "Which file is normally the project-level entry point for management commands?",
+    "options": [
+      "settings.py",
+      "manage.py",
+      "urls.py",
+      "wsgi.py"
+    ],
+    "answer": 1,
+    "explanation": "`manage.py` invokes Django management commands with project settings configured."
+  },
+  {
+    "id": "u2l4q06",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.3,
+    "prompt": "What is a Django app within a project?",
+    "options": [
+      "A second operating system",
+      "A browser extension required by users",
+      "A component providing related functionality",
+      "A replacement for the Django package"
+    ],
+    "answer": 2,
+    "explanation": "A Django project can organize features into multiple apps."
+  },
+  {
+    "id": "u2l4q07",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.38,
+    "prompt": "What local address does runserver ordinarily print when started with its default host and port?",
+    "options": [
+      "http://127.0.0.1:22/",
+      "http://127.0.0.1:443/",
+      "https://127.0.0.1:8000/",
+      "http://127.0.0.1:8000/"
+    ],
+    "answer": 3,
+    "explanation": "Django’s default development server uses local HTTP on port 8000."
+  },
+  {
+    "id": "u2l4q08",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.44,
+    "prompt": "Which file commonly contains top-level URL patterns in a fresh project?",
+    "options": [
+      "asgi.py",
+      "settings.py",
+      "manage.py",
+      "urls.py"
+    ],
+    "answer": 3,
+    "explanation": "The project URL configuration is generated in `urls.py`."
+  },
+  {
+    "id": "u2l4q09",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.48,
+    "prompt": "Which command verifies the installed Django version using the chosen Python interpreter?",
+    "options": [
+      "python -m django --version",
+      "python -m venv --version django",
+      "python manage.py startproject --version portal",
+      "python -m pip install --version django"
+    ],
+    "answer": 0,
+    "explanation": "The `django` module exposes a `--version` option."
+  },
+  {
+    "id": "u2l4q10",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.53,
+    "prompt": "Why start runserver while building a new project?",
+    "options": [
+      "To publish to GitHub Pages.",
+      "To test local requests and inspect development errors.",
+      "To install every package listed by pip.",
+      "To create a production deployment automatically."
+    ],
+    "answer": 1,
+    "explanation": "The development server lets you interact with the project locally during development."
+  },
+  {
+    "id": "u2l4q11",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.57,
+    "prompt": "What is the difference between a project and an app in Django’s organization?",
+    "options": [
+      "App names define ports and project names define domains.",
+      "A project supplies overall configuration and apps implement features.",
+      "Each app must contain an independent Django installation.",
+      "A project is a single template and an app is a server."
+    ],
+    "answer": 1,
+    "explanation": "Projects assemble settings and apps, while apps organize related functionality."
+  },
+  {
+    "id": "u2l4q12",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.61,
+    "prompt": "An app implementing course enrollment is useful in two Django projects. Which design supports reuse?",
+    "options": [
+      "Make all enrollment content part of one project’s hostname.",
+      "Change the development server’s default port for each app.",
+      "Store the enrollment code only in one project’s manage.py.",
+      "Keep enrollment’s feature logic inside the app."
+    ],
+    "answer": 3,
+    "explanation": "A focused app can be included in multiple project configurations."
+  },
+  {
+    "id": "u2l4q13",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.72,
+    "prompt": "Running manage.py fails with No module named 'django'. Which command checks the current interpreter for the package?",
+    "options": [
+      "python -m pip show Django",
+      "django-admin startapp django",
+      "python -m venv --help",
+      "python manage.py runserver 9000"
+    ],
+    "answer": 0,
+    "explanation": "`pip show` via the same interpreter confirms whether it sees Django installed."
+  },
+  {
+    "id": "u2l4q14",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.78,
+    "prompt": "Port 8000 is already in use. Which command starts a second local development server on port 8001?",
+    "options": [
+      "python manage.py runserver 8000",
+      "python manage.py runserver 8001",
+      "python manage.py port 8001",
+      "python manage.py startproject 8001"
+    ],
+    "answer": 1,
+    "explanation": "Passing a port to `runserver` selects that local listening port."
+  },
+  {
+    "id": "u2l4q15",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.83,
+    "prompt": "What changes when you run django-admin startproject portal . inside an existing project folder?",
+    "options": [
+      "Django starts the portal server immediately.",
+      "All generated files are omitted because the folder exists.",
+      "Only manage.py is generated and the portal package is skipped.",
+      "manage.py is placed in the current directory alongside the generated portal package."
+    ],
+    "answer": 3,
+    "explanation": "The dot specifies the current directory as the project destination."
+  },
+  {
+    "id": "u2l4q16",
+    "unit": 2,
+    "lesson": 4,
+    "difficulty": 0.89,
+    "prompt": "A fresh project has outer portal/manage.py and inner portal/portal/settings.py. Which folder should you enter to run python manage.py runserver?",
+    "options": [
+      "The inner portal package",
+      "Any folder, because manage.py is always discovered",
+      "The outer portal folder",
+      "The folder containing your browser’s files"
+    ],
+    "answer": 2,
+    "explanation": "The command executes the `manage.py` file in the current directory."
+  },
+  {
+    "id": "u2l5q01",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.13,
+    "prompt": "What does a basic function-based Django view return?",
+    "options": [
+      "A URL pattern list",
+      "A project settings object",
+      "An HTTP response object",
+      "A virtual environment path"
+    ],
+    "answer": 2,
+    "explanation": "A Django function-based view must return a response object."
+  },
+  {
+    "id": "u2l5q02",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.16,
+    "prompt": "Which object does Django pass as the first argument to a function-based view?",
+    "options": [
+      "The request",
+      "A CSS rule",
+      "The template file path",
+      "The database name"
+    ],
+    "answer": 0,
+    "explanation": "The request carries information about the incoming HTTP request."
+  },
+  {
+    "id": "u2l5q03",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.22,
+    "prompt": "Which function declares a typical route in urlpatterns?",
+    "options": [
+      "open()",
+      "path()",
+      "print()",
+      "render()"
+    ],
+    "answer": 1,
+    "explanation": "`path()` relates a URL pattern to a view or included URL configuration."
+  },
+  {
+    "id": "u2l5q04",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.24,
+    "prompt": "What does HttpResponse(\"Hello\") provide?",
+    "options": [
+      "A URL converter",
+      "A new Django app",
+      "An HTTP response with a Hello body",
+      "A remote Git branch"
+    ],
+    "answer": 2,
+    "explanation": "`HttpResponse` wraps content in a response suitable for Django to send."
+  },
+  {
+    "id": "u2l5q05",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.28,
+    "prompt": "Which command generates an app named catalog from a Django project folder?",
+    "options": [
+      "python manage.py startapp catalog",
+      "python manage.py startproject catalog",
+      "python manage.py runserver catalog",
+      "python -m venv catalog"
+    ],
+    "answer": 0,
+    "explanation": "`startapp` creates the standard files for a Django app."
+  },
+  {
+    "id": "u2l5q06",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.3,
+    "prompt": "What name must Django commonly find in a URL configuration module?",
+    "options": [
+      "urlpatterns",
+      "routes_json",
+      "views",
+      "installed_apps"
+    ],
+    "answer": 0,
+    "explanation": "`urlpatterns` contains the URL pattern objects Django evaluates."
+  },
+  {
+    "id": "u2l5q07",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.38,
+    "prompt": "Why use include(\"catalog.urls\") in project URL configuration?",
+    "options": [
+      "Render catalog’s home page immediately.",
+      "Register a model’s fields.",
+      "Delegate a prefix’s routes to the catalog app.",
+      "Import every HTML file as a Python module."
+    ],
+    "answer": 2,
+    "explanation": "`include()` delegates the remaining part of the path to another URL configuration."
+  },
+  {
+    "id": "u2l5q08",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.44,
+    "prompt": "Which pattern captures a numeric item ID as an integer named pk?",
+    "options": [
+      "path(\"items/pk/\", detail)",
+      "path(\"items/<int:pk>/\", detail)",
+      "path(\"items/<slug:pk>/\", detail)",
+      "path(\"items/<str:pk>/\", detail)"
+    ],
+    "answer": 1,
+    "explanation": "The `int` converter parses the segment and passes it as an integer keyword argument."
+  },
+  {
+    "id": "u2l5q09",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.48,
+    "prompt": "Which view header matches path(\"items/<int:pk>/\", detail)?",
+    "options": [
+      "def detail(request, item):",
+      "def detail(pk):",
+      "def detail():",
+      "def detail(request, pk):"
+    ],
+    "answer": 3,
+    "explanation": "Django supplies the request and the captured value using the name `pk`."
+  },
+  {
+    "id": "u2l5q10",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.53,
+    "prompt": "Where is an app ordinarily registered to enable Django’s app discovery?",
+    "options": [
+      "INSTALLED_APPS in settings.py",
+      "The body of its view function",
+      "The project’s .gitignore",
+      "The development server host name"
+    ],
+    "answer": 0,
+    "explanation": "`INSTALLED_APPS` defines the applications loaded by Django’s app registry."
+  },
+  {
+    "id": "u2l5q11",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.58,
+    "prompt": "What does a name such as name=\"home\" give a path?",
+    "options": [
+      "A new Python module name",
+      "An identifier for URL reversing",
+      "An alternative request method",
+      "A required query parameter"
+    ],
+    "answer": 1,
+    "explanation": "A named pattern can be resolved to its current URL by Django."
+  },
+  {
+    "id": "u2l5q12",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.61,
+    "prompt": "A view calls print(\"OK\") and then returns HttpResponse(\"Done\"). What appears in the browser response body?",
+    "options": [
+      "OK Done",
+      "Done",
+      "OK",
+      "None"
+    ],
+    "answer": 1,
+    "explanation": "`HttpResponse` sets the response body, while `print` writes to the server output."
+  },
+  {
+    "id": "u2l5q13",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.73,
+    "prompt": "With path(\"shop/\", include(\"catalog.urls\")) and an app path(\"sale/\", sale), what URL reaches the sale view?",
+    "options": [
+      "/sale/shop/",
+      "/shop/sale/",
+      "/shop/catalog/sale/",
+      "/catalog/sale/"
+    ],
+    "answer": 1,
+    "explanation": "The outer prefix is followed by the route inside the included configuration."
+  },
+  {
+    "id": "u2l5q14",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.77,
+    "prompt": "If <str:slug>/ is ordered before about/, which view matches /about/ when both routes can match?",
+    "options": [
+      "The view attached to <str:slug>/",
+      "The view attached to about/ because literal routes always win",
+      "Both views run",
+      "Neither route matches"
+    ],
+    "answer": 0,
+    "explanation": "Django uses the first matching URL pattern in declaration order."
+  },
+  {
+    "id": "u2l5q15",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.83,
+    "prompt": "The path(\"books/<int:pk>/\", detail) route receives /books/abc/. With no other matching routes, what happens?",
+    "options": [
+      "Django returns a 404.",
+      "Django tries the database to determine pk.",
+      "The view receives pk=\"abc\".",
+      "The view receives pk=0."
+    ],
+    "answer": 0,
+    "explanation": "The `int` converter rejects `abc`, so the path never dispatches to the view."
+  },
+  {
+    "id": "u2l5q16",
+    "unit": 2,
+    "lesson": 5,
+    "difficulty": 0.9,
+    "prompt": "A view for path(\"courses/<int:id>/\", show) accepts (request, course_id) with no defaults. Why does matching /courses/7/ fail at the call?",
+    "options": [
+      "The view has no route because the path ends in a slash.",
+      "The captured keyword is id, while the function expects course_id.",
+      "The view must accept course_id before request.",
+      "The int converter passes the value as a string."
+    ],
+    "answer": 1,
+    "explanation": "The capture name must match a keyword parameter accepted by the view."
+  },
+  {
+    "id": "u2l6q01",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.13,
+    "prompt": "Which helper commonly combines a Django template with context and returns an HTTP response?",
+    "options": [
+      "print()",
+      "path()",
+      "include()",
+      "render()"
+    ],
+    "answer": 3,
+    "explanation": "`render()` loads and renders the template, then returns a response."
+  },
+  {
+    "id": "u2l6q02",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.18,
+    "prompt": "What is context in a Django template workflow?",
+    "options": [
+      "A list of all Git commits",
+      "Data supplied to the template by the view",
+      "The directory of installed Python packages",
+      "A name for the browser window"
+    ],
+    "answer": 1,
+    "explanation": "Context makes application data available while Django renders the template."
+  },
+  {
+    "id": "u2l6q03",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.22,
+    "prompt": "Which template syntax displays a variable named title?",
+    "options": [
+      "${title}",
+      "{% title %}",
+      "{# title #}",
+      "{{ title }}"
+    ],
+    "answer": 3,
+    "explanation": "Double braces output the resolved variable value."
+  },
+  {
+    "id": "u2l6q04",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.25,
+    "prompt": "Which tag loads Django’s static-file template tags?",
+    "options": [
+      "{{ load static }}",
+      "{% load static %}",
+      "{% include static %}",
+      "{# load static #}"
+    ],
+    "answer": 1,
+    "explanation": "`{% load static %}` makes the `static` tag available in the template."
+  },
+  {
+    "id": "u2l6q05",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.27,
+    "prompt": "Which is typically a static asset?",
+    "options": [
+      "A view’s changing context dictionary",
+      "A site stylesheet",
+      "A request object",
+      "An individual’s dynamically calculated account balance"
+    ],
+    "answer": 1,
+    "explanation": "Stylesheets are delivered as files outside the rendered template content."
+  },
+  {
+    "id": "u2l6q06",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.3,
+    "prompt": "Which tag closes a Django template for loop?",
+    "options": [
+      "{% endif %}",
+      "{% endblock %}",
+      "{{ endfor }}",
+      "{% endfor %}"
+    ],
+    "answer": 3,
+    "explanation": "`{% endfor %}` marks the end of a template loop block."
+  },
+  {
+    "id": "u2l6q07",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.38,
+    "prompt": "Which view call correctly passes title to catalog/home.html?",
+    "options": [
+      "render(request, {\"title\": \"Catalog\"}, \"catalog/home.html\")",
+      "render(request, \"Catalog\", {\"catalog/home.html\": \"title\"})",
+      "render(\"catalog/home.html\", request, {\"title\": \"Catalog\"})",
+      "render(request, \"catalog/home.html\", {\"title\": \"Catalog\"})"
+    ],
+    "answer": 3,
+    "explanation": "`render()` takes the request, template name, then context dictionary."
+  },
+  {
+    "id": "u2l6q08",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.44,
+    "prompt": "After loading static, which template tag resolves a stylesheet named catalog/site.css?",
+    "options": [
+      "{% include 'catalog/site.css' %}",
+      "{{ static 'catalog/site.css' }}",
+      "{% static 'catalog/site.css' %}",
+      "{% url 'catalog/site.css' %}"
+    ],
+    "answer": 2,
+    "explanation": "The `static` tag creates a URL for the configured static asset."
+  },
+  {
+    "id": "u2l6q09",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.49,
+    "prompt": "Which syntax loops through a list passed as courses?",
+    "options": [
+      "{% while courses %}",
+      "{% courses in course %}",
+      "{% for course in courses %}",
+      "{{ for course in courses }}"
+    ],
+    "answer": 2,
+    "explanation": "The `for` tag binds each item in `courses` to `course`."
+  },
+  {
+    "id": "u2l6q10",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.54,
+    "prompt": "What should a child template use to indicate its base layout?",
+    "options": [
+      "{{ base.html }}",
+      "{% url 'base.html' %}",
+      "{% static 'base.html' %}",
+      "{% extends 'base.html' %}"
+    ],
+    "answer": 3,
+    "explanation": "`extends` declares the template whose layout the child inherits."
+  },
+  {
+    "id": "u2l6q11",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.59,
+    "prompt": "What does {% url 'home' %} typically generate?",
+    "options": [
+      "The content of the home template",
+      "The return value of the view as text",
+      "A static file name",
+      "The URL path for the pattern named home"
+    ],
+    "answer": 3,
+    "explanation": "The `url` tag reverses a named Django URL pattern."
+  },
+  {
+    "id": "u2l6q12",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.63,
+    "prompt": "Why place an app’s styles under static/catalog/ when that app is named catalog?",
+    "options": [
+      "Make Django treat CSS as Python.",
+      "Prefix its asset paths to avoid collisions with other apps.",
+      "Register catalog as the URL namespace automatically.",
+      "Turn those styles into template variables."
+    ],
+    "answer": 1,
+    "explanation": "An app-specific directory gives assets distinct relative names."
+  },
+  {
+    "id": "u2l6q13",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.74,
+    "prompt": "What renders when courses is an empty list?",
+    "code": "{% for item in courses %}{{ item }}{% empty %}No courses{% endfor %}",
+    "options": [
+      "courses",
+      "No courses",
+      "Nothing",
+      "A template syntax error"
+    ],
+    "answer": 1,
+    "explanation": "The `empty` branch runs when the iterable contains no items."
+  },
+  {
+    "id": "u2l6q14",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.78,
+    "prompt": "Context is {\"course\": {\"title\": \"Python\"}}. Which expression displays Python?",
+    "options": [
+      "{% course.title %}",
+      "{{ course[title] }}",
+      "{{ course.title }}",
+      "{{ title.course }}"
+    ],
+    "answer": 2,
+    "explanation": "Django’s dot lookup can access a dictionary value by key."
+  },
+  {
+    "id": "u2l6q15",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.84,
+    "prompt": "A parent template has {% block content %}Default{% endblock %}. A child extends it and overrides the content block. What appears there?",
+    "options": [
+      "The child’s block content",
+      "The child’s entire template file as literal text",
+      "Only Default",
+      "Default followed automatically by the child’s block"
+    ],
+    "answer": 0,
+    "explanation": "An overridden block supplies that section of the inherited layout."
+  },
+  {
+    "id": "u2l6q16",
+    "unit": 2,
+    "lesson": 6,
+    "difficulty": 0.89,
+    "prompt": "A route is named detail and has an integer capture named pk. Which tag generates its URL from a context variable named book_id?",
+    "options": [
+      "{% url 'detail' id=book_id %}",
+      "{% static 'detail' pk=book_id %}",
+      "{% url 'detail' pk=book_id %}",
+      "{% url 'detail' pk='book_id' %}"
+    ],
+    "answer": 2,
+    "explanation": "The `url` tag passes the evaluated `book_id` as the required `pk` argument."
+  },
+  {
+    "id": "u3l1q01",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.12,
+    "prompt": "What does one row in a relational table typically represent?",
+    "options": [
+      "One record",
+      "An entire database schema",
+      "A single field definition",
+      "A list of database servers"
+    ],
+    "answer": 0,
+    "explanation": "A row contains the field values for one record."
+  },
+  {
+    "id": "u3l1q02",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.16,
+    "prompt": "What does a column typically represent?",
+    "options": [
+      "A second database",
+      "A single copy of every row",
+      "One attribute of the records",
+      "A network address"
+    ],
+    "answer": 2,
+    "explanation": "A column defines one type of information stored for each row."
+  },
+  {
+    "id": "u3l1q03",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.21,
+    "prompt": "What is the purpose of a primary key?",
+    "options": [
+      "Uniquely identify each row in a table.",
+      "Describe the physical column order.",
+      "Store arbitrary duplicates for every record.",
+      "Encrypt the whole table."
+    ],
+    "answer": 0,
+    "explanation": "A primary key distinguishes every row and cannot be null."
+  },
+  {
+    "id": "u3l1q04",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.23,
+    "prompt": "What is the usual purpose of a foreign key?",
+    "options": [
+      "Ensure every value is a free-text comment.",
+      "Set the number of rows returned by default.",
+      "Declare the displayed column order.",
+      "Reference a key in another or the same table."
+    ],
+    "answer": 3,
+    "explanation": "A foreign key defines a reference between related records."
+  },
+  {
+    "id": "u3l1q05",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.26,
+    "prompt": "What does ORM stand for?",
+    "options": [
+      "Online resource manager",
+      "Ordered record management",
+      "Object-relational mapping",
+      "Optional runtime module"
+    ],
+    "answer": 2,
+    "explanation": "Object-relational mapping connects program objects with relational records."
+  },
+  {
+    "id": "u3l1q06",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.3,
+    "prompt": "How does a Django model instance generally relate to a relational table?",
+    "options": [
+      "It represents all databases on the server.",
+      "It represents the database connection itself.",
+      "It represents the table’s column names only.",
+      "It represents one record."
+    ],
+    "answer": 3,
+    "explanation": "An instance holds values corresponding to a row of its model’s table."
+  },
+  {
+    "id": "u3l1q07",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.37,
+    "prompt": "One customer can place many orders and each order has one customer. Which table normally carries the customer foreign key?",
+    "options": [
+      "Customer",
+      "Neither table.",
+      "Order",
+      "Both tables must have it."
+    ],
+    "answer": 2,
+    "explanation": "Each order references the one customer that placed it."
+  },
+  {
+    "id": "u3l1q08",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.43,
+    "prompt": "A department can have several staff records. How can the links remain valid?",
+    "options": [
+      "Remove all identifiers from the department table.",
+      "Copy the department’s display name into every staff primary key.",
+      "Enforce that each non-null department key references an existing department.",
+      "Use the same primary key for every staff member in a department."
+    ],
+    "answer": 2,
+    "explanation": "A foreign-key constraint enforces the validity of each populated reference."
+  },
+  {
+    "id": "u3l1q09",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.49,
+    "prompt": "Which key is the most reliable primary key when course titles may repeat or change?",
+    "options": [
+      "The number of enrolled students",
+      "The classroom number",
+      "The course title alone",
+      "A stable unique course ID"
+    ],
+    "answer": 3,
+    "explanation": "A stable unique ID continues to distinguish a row if its other values change."
+  },
+  {
+    "id": "u3l1q10",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.53,
+    "prompt": "Why store a customer address once in Customer instead of copying it into the Orders table when only the current address is needed?",
+    "options": [
+      "It disables relationships between tables.",
+      "It sends every order to a different database.",
+      "It ensures every order has a different address.",
+      "It reduces conflicting copies when the current address changes."
+    ],
+    "answer": 3,
+    "explanation": "Storing the current address in one place avoids updating every order row."
+  },
+  {
+    "id": "u3l1q11",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.58,
+    "prompt": "How does an ORM often help developers retrieve relational data?",
+    "options": [
+      "It makes data accessible only through HTML.",
+      "It permanently replaces the database with memory.",
+      "It removes all database constraints.",
+      "It translates object-oriented operations into database queries."
+    ],
+    "answer": 3,
+    "explanation": "An ORM builds database operations from the application’s model API."
+  },
+  {
+    "id": "u3l1q12",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.62,
+    "prompt": "What table design models students taking many courses where each course can have many students?",
+    "options": [
+      "A fixed single student column on each course record",
+      "A fixed single course column on each student record",
+      "One shared primary key on both tables",
+      "A joining table with a student key and a course key"
+    ],
+    "answer": 3,
+    "explanation": "Each joining row records one student-course relationship."
+  },
+  {
+    "id": "u3l1q13",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.73,
+    "prompt": "How should an Enrollment table prevent a student from enrolling in the same course twice while allowing many courses per student?",
+    "options": [
+      "Make all enrollment records use the same ID.",
+      "Require each course key to be unique by itself.",
+      "Require uniqueness for the student and course key pair.",
+      "Require each student key to be unique by itself."
+    ],
+    "answer": 2,
+    "explanation": "A pair constraint blocks duplicate combinations while allowing each key to recur separately."
+  },
+  {
+    "id": "u3l1q14",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.78,
+    "prompt": "If a relational database enforces an active foreign key, can a child row reference a nonexistent parent ID when the constraint is checked?",
+    "options": [
+      "Yes, if the child’s primary key is unique.",
+      "Yes, if that child is the first row.",
+      "Yes, if the ID is an integer.",
+      "No, the operation must fail."
+    ],
+    "answer": 3,
+    "explanation": "The foreign-key value must identify an existing referenced record."
+  },
+  {
+    "id": "u3l1q15",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.85,
+    "prompt": "Three orders reference customer 7. The customer’s display name changes. In a normalized schema, how many rows need an update to reflect the current name?",
+    "options": [
+      "Zero rows",
+      "Four rows",
+      "Three order rows",
+      "One customer row"
+    ],
+    "answer": 3,
+    "explanation": "Orders keep referencing the same customer key and the name lives on that customer row."
+  },
+  {
+    "id": "u3l1q16",
+    "unit": 3,
+    "lesson": 1,
+    "difficulty": 0.9,
+    "prompt": "A table Employee has id and manager_id, and manager_id can be NULL. What schema best fits this design?",
+    "options": [
+      "A primary key that is always NULL",
+      "A unique key requiring every manager to have only one employee",
+      "A nullable foreign key to Employee.id",
+      "A string list of every employee manager in one row"
+    ],
+    "answer": 2,
+    "explanation": "A self-reference links employees to managers in the same table and permits top-level employees."
+  },
+  {
+    "id": "u3l2q01",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.12,
+    "prompt": "What base class does a standard Django model inherit from?",
+    "options": [
+      "forms.Form",
+      "models.Field",
+      "HttpResponse",
+      "models.Model"
+    ],
+    "answer": 3,
+    "explanation": "`models.Model` provides Django’s model definition and persistence behavior."
+  },
+  {
+    "id": "u3l2q02",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.16,
+    "prompt": "Which field is appropriate for storing a short title with a maximum length?",
+    "options": [
+      "IntegerField",
+      "TextField",
+      "CharField",
+      "BooleanField"
+    ],
+    "answer": 2,
+    "explanation": "`CharField` represents bounded character data."
+  },
+  {
+    "id": "u3l2q03",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.2,
+    "prompt": "Which field represents a true-or-false property?",
+    "options": [
+      "BooleanField",
+      "FloatField",
+      "DateField",
+      "EmailField"
+    ],
+    "answer": 0,
+    "explanation": "`BooleanField` stores a boolean value."
+  },
+  {
+    "id": "u3l2q04",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.23,
+    "prompt": "Which field best represents a date without a time of day?",
+    "options": [
+      "TimeField",
+      "DateTimeField",
+      "DurationField",
+      "DateField"
+    ],
+    "answer": 3,
+    "explanation": "`DateField` models the date portion only."
+  },
+  {
+    "id": "u3l2q05",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.26,
+    "prompt": "Which field is appropriate for a long, unbounded description?",
+    "options": [
+      "IntegerField",
+      "TextField",
+      "ForeignKey",
+      "DateField"
+    ],
+    "answer": 1,
+    "explanation": "`TextField` is designed for longer text content."
+  },
+  {
+    "id": "u3l2q06",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.3,
+    "prompt": "Which Django field models many orders belonging to one customer?",
+    "options": [
+      "OneToOneField on Order",
+      "ManyToManyField on Order",
+      "BooleanField on Customer",
+      "ForeignKey on Order"
+    ],
+    "answer": 3,
+    "explanation": "`ForeignKey` lets many orders reference the same customer."
+  },
+  {
+    "id": "u3l2q07",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.38,
+    "prompt": "Which field pairs one profile with one user and prevents two profiles from referencing the same user?",
+    "options": [
+      "ForeignKey without uniqueness",
+      "OneToOneField",
+      "TextField",
+      "ManyToManyField"
+    ],
+    "answer": 1,
+    "explanation": "A one-to-one field enforces uniqueness of the related reference."
+  },
+  {
+    "id": "u3l2q08",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.44,
+    "prompt": "Which model field is most suitable for prices that need exact decimal arithmetic?",
+    "options": [
+      "DecimalField",
+      "BooleanField",
+      "DurationField",
+      "FloatField"
+    ],
+    "answer": 0,
+    "explanation": "`DecimalField` uses fixed decimal precision, suitable for monetary amounts."
+  },
+  {
+    "id": "u3l2q09",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.49,
+    "prompt": "Which field directly models books having several authors and authors writing several books?",
+    "options": [
+      "ManyToManyField",
+      "URLField",
+      "OneToOneField",
+      "ForeignKey without uniqueness"
+    ],
+    "answer": 0,
+    "explanation": "`ManyToManyField` represents multiple related records on both sides."
+  },
+  {
+    "id": "u3l2q10",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.54,
+    "prompt": "Which option allows a field to store a database NULL?",
+    "options": [
+      "blank=True",
+      "unique=True",
+      "null=True",
+      "editable=False"
+    ],
+    "answer": 2,
+    "explanation": "`null=True` controls whether the database can store NULL for the field."
+  },
+  {
+    "id": "u3l2q11",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.58,
+    "prompt": "Which option makes the field optional during ordinary model form validation?",
+    "options": [
+      "primary_key=True",
+      "db_index=True",
+      "blank=True",
+      "null=True"
+    ],
+    "answer": 2,
+    "explanation": "`blank` determines whether validation permits an empty field."
+  },
+  {
+    "id": "u3l2q12",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.63,
+    "prompt": "Which setting gives a BooleanField an initial value of false when no value is supplied?",
+    "options": [
+      "blank=False",
+      "unique=False",
+      "default=False",
+      "null=False"
+    ],
+    "answer": 2,
+    "explanation": "The `default` option supplies a value when the caller omits the field."
+  },
+  {
+    "id": "u3l2q13",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.73,
+    "prompt": "Which declaration preserves a book when its publisher is deleted by clearing the relation?",
+    "options": [
+      "models.ForeignKey(Publisher, on_delete=models.PROTECT)",
+      "models.ForeignKey(Publisher, null=True, on_delete=models.SET_NULL)",
+      "models.ForeignKey(Publisher, null=True, on_delete=models.CASCADE)",
+      "models.ForeignKey(Publisher, on_delete=models.CASCADE)"
+    ],
+    "answer": 1,
+    "explanation": "`SET_NULL` clears the reference and `null=True` permits storing NULL."
+  },
+  {
+    "id": "u3l2q14",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.78,
+    "prompt": "Which option prevents multiple rows from storing the same non-null employee code in a CharField?",
+    "options": [
+      "default=\"\"",
+      "unique=True",
+      "blank=False",
+      "null=False"
+    ],
+    "answer": 1,
+    "explanation": "`unique=True` imposes a uniqueness constraint on the field’s values."
+  },
+  {
+    "id": "u3l2q15",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.84,
+    "prompt": "Which definition permits a decimal price up to 999.99 with two decimal places?",
+    "options": [
+      "models.DecimalField(max_digits=3, decimal_places=2)",
+      "models.DecimalField(max_digits=5, decimal_places=0)",
+      "models.IntegerField()",
+      "models.DecimalField(max_digits=5, decimal_places=2)"
+    ],
+    "answer": 3,
+    "explanation": "Five total digits with two after the decimal leaves three before it."
+  },
+  {
+    "id": "u3l2q16",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.9,
+    "prompt": "Each room belongs to one building and deleting a building should be rejected while rooms reference it. Which field fits?",
+    "options": [
+      "ForeignKey on Room with on_delete=models.PROTECT",
+      "OneToOneField on Room with on_delete=models.PROTECT",
+      "ManyToManyField on Room",
+      "ForeignKey on Room with on_delete=models.CASCADE"
+    ],
+    "answer": 0,
+    "explanation": "`ForeignKey` permits many rooms per building, and `PROTECT` blocks deletion of the referenced building."
+  },
+  {
+    "id": "u3l2q17",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.43,
+    "prompt": "Which field can use email-format validation in Django’s model field validation?",
+    "options": [
+      "IntegerField",
+      "EmailField",
+      "BooleanField",
+      "DateField"
+    ],
+    "answer": 1,
+    "explanation": "`EmailField` includes an email validator."
+  },
+  {
+    "id": "u3l2q18",
+    "unit": 3,
+    "lesson": 2,
+    "difficulty": 0.66,
+    "prompt": "Which field stores an automatically assigned primary key when no primary key is explicitly defined?",
+    "options": [
+      "An auto-incrementing integer field named id by default",
+      "A CharField named name",
+      "A BooleanField named default",
+      "A ForeignKey named owner"
+    ],
+    "answer": 0,
+    "explanation": "Django adds an auto field as the model’s primary key by default, using the configured type."
+  }
+]
