@@ -1,4 +1,4 @@
-export const QUIZ_SIZE = 50
+export const QUIZ_SIZE = 60
 export const TIME_LIMITS = [15, 30, 45, 60, 90]
 export const UNITS = [
   {
@@ -66,9 +66,10 @@ export function newAttempt(bank, minutes, now = Date.now(), random = Math.random
     return true
   })
   const selectedIds = new Set(selected.map(question => question.id))
+  const extraSimple = shuffled.filter(question => !selectedIds.has(question.id) && difficultyBand(question.difficulty) === 'Simple')
   const extraMedium = shuffled.filter(question => !selectedIds.has(question.id) && difficultyBand(question.difficulty) === 'Medium')
   const high = shuffled.filter(question => difficultyBand(question.difficulty) === 'High')
-  const questions = shuffle([...selected, ...extraMedium.slice(0, 2), ...high.slice(0, 12)], random)
+  const questions = shuffle([...selected, ...extraSimple.slice(0, 4), ...extraMedium.slice(0, 6), ...high.slice(0, 14)], random)
   if (questions.length !== QUIZ_SIZE) throw new Error('The question bank is missing required difficulty coverage.')
   return {
     id: globalThis.crypto?.randomUUID?.() ?? `${now}-${random().toString(36).slice(2)}`,

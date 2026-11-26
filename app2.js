@@ -132,7 +132,7 @@ function homePage() {
       <section class="panel setup" aria-labelledby="setup-heading">
         <div class="section-heading"><span class="section-icon violet">${icon('timer')}</span><div><h2 id="setup-heading">Start a practice quiz</h2><p>Choose a mode that works for you.</p></div></div>
         ${active ? `
-          <div class="active-notice"><strong>Quiz in progress</strong><p>Question ${active.index + 1} of ${QUIZ_SIZE} · ${attemptMode(active)}</p></div>
+          <div class="active-notice"><strong>Quiz in progress</strong><p>Question ${active.index + 1} of ${active.questions.length} · ${attemptMode(active)}</p></div>
           <div class="resume-actions">
             <button type="button" class="primary" data-action="resume">Resume quiz</button>
             <button type="button" class="secondary" data-action="reset">Start over</button>
@@ -196,9 +196,9 @@ function quizPage() {
   const nextLabel = position === attempt.questions.length ? 'View results' : 'Next question'
   return `<div class="quiz-shell">
     <section class="quiz-progress" aria-label="Quiz progress">
-      <div class="progress-top"><div><span class="subtle">${bankName(attempt)} · ${timed ? 'Timed quiz' : 'Untimed quiz'}</span><h1 id="page-title" tabindex="-1">Question ${position} of ${QUIZ_SIZE}</h1></div>
+      <div class="progress-top"><div><span class="subtle">${bankName(attempt)} · ${timed ? 'Timed quiz' : 'Untimed quiz'}</span><h1 id="page-title" tabindex="-1">Question ${position} of ${attempt.questions.length}</h1></div>
         <div class="quiz-clock" id="quiz-clock">${icon('timer')}<div><span>${timed ? 'Time remaining' : 'Time elapsed'}</span><strong id="clock-value" role="timer">${clockValue(attempt)}</strong></div></div></div>
-      <progress value="${attempt.index + Number(resolved)}" max="${QUIZ_SIZE}" aria-label="Questions completed"></progress>
+      <progress value="${attempt.index + Number(resolved)}" max="${attempt.questions.length}" aria-label="Questions completed"></progress>
     </section>
     <section class="panel question-card" aria-labelledby="question-title">
       ${questionMeta(question)}
@@ -277,7 +277,7 @@ function resultPage(attempt) {
       <h1 id="page-title" tabindex="-1">Your results</h1>
       <p>${attemptMode(attempt)} <span aria-hidden="true">·</span> ${dateLabel(attempt.finishedAt)}</p>
       <div class="result-time">${icon('timer')} <span>Time spent <strong>${formatTime(attempt.finishedAt - attempt.startedAt)}</strong></span></div>
-    </div><div class="score-ring" style="--score: ${report.percentage}%"><div><strong>${report.percentage}%</strong><span>${report.correct} of ${QUIZ_SIZE} correct</span></div></div></section>
+    </div><div class="score-ring" style="--score: ${report.percentage}%"><div><strong>${report.percentage}%</strong><span>${report.correct} of ${attempt.questions.length} correct</span></div></div></section>
     <section class="panel breakdown" aria-labelledby="breakdown-heading"><div class="section-heading"><span class="section-icon violet">${icon('chart')}</span><div><h2 id="breakdown-heading">Answer breakdown</h2></div></div>
       <div class="stats-grid ${singleAnswer ? 'stats-grid-timed' : ''}">
         ${breakdown.map(([total, label]) => `<div><strong>${total}</strong><span>${label}</span></div>`).join('')}
@@ -341,7 +341,7 @@ function historyPage() {
     <section class="panel history-panel" aria-label="Saved attempts">
     ${history.length ? history.map(({ attempt, report }) => {
       return `<article class="history-row"><span class="section-icon violet">${icon('chart')}</span><div><strong>${dateLabel(attempt.finishedAt)}</strong><p>${attemptMode(attempt)} · ${formatTime(attempt.finishedAt - attempt.startedAt)}${attempt.reason === 'timeout' ? ' · Time expired' : ''}</p></div>
-      <span class="history-score">${report.correct}/${QUIZ_SIZE}</span><button class="secondary" data-action="report" data-id="${escapeHtml(attempt.id)}">View report</button></article>`
+      <span class="history-score">${report.correct}/${attempt.questions.length}</span><button class="secondary" data-action="report" data-id="${escapeHtml(attempt.id)}">View report</button></article>`
     }).join('') : `<div class="empty-history"><span class="section-icon violet">${icon('history')}</span><h2>No quizzes yet</h2><p>Your completed quizzes will appear here.</p><button class="primary" data-action="home">${state.active ? 'Resume practice' : 'Go to practice'}</button></div>`}
     </section>
   </div>`
