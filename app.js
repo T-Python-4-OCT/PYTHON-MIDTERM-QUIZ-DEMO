@@ -32,12 +32,17 @@ const ICONS = {
   database: '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
 }
 
-let bank = []
+const BANKS = [
+  { id: 'bank-1', name: 'Bank 1', file: './data/questions.json' },
+  { id: 'bank-2', name: 'Bank 2', file: './data/questions-bank-2.json' },
+]
+const questionBanks = new Map()
 let view = 'home'
 let mode = 'untimed'
 let minutes = 45
 let reportId = null
 let state = restore()
+let selectedBankId = BANKS.some(bank => bank.id === state.selectedBankId) ? state.selectedBankId : 'bank-1'
 
 function icon(name) {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`
@@ -90,7 +95,12 @@ function dateLabel(timestamp) {
 }
 
 function attemptMode(attempt) {
-  return attempt.deadline === null ? 'Untimed' : `Timed · ${(attempt.deadline - attempt.startedAt) / 60_000} min`
+  const mode = attempt.deadline === null ? 'Untimed' : `Timed · ${(attempt.deadline - attempt.startedAt) / 60_000} min`
+  return `${bankName(attempt)} · ${mode}`
+}
+
+function bankName(attempt) {
+  return BANKS.find(bank => bank.id === attempt.bankId)?.name ?? 'Bank 1'
 }
 
 function homePage() {
@@ -104,7 +114,7 @@ function homePage() {
         <p>Practice Python, web foundations, and Django with a fresh set of questions every time.</p>
         <div class="hero-stats" aria-label="Quiz format">
           <span>${icon('list')} <strong>${QUIZ_SIZE}</strong> questions per quiz</span>
-          <span>${icon('layers')} <strong>${bank.length}</strong> in the bank</span>
+          <span>${icon('layers')} <strong>${[...questionBanks.values()].reduce((total, bank) => total + bank.length, 0)}</strong> across 2 banks</span>
           <span>${icon('infinity')} Unlimited retakes</span>
         </div>
       </div>
@@ -123,9 +133,17 @@ function homePage() {
         <div class="section-heading"><span class="section-icon violet">${icon('timer')}</span><div><h2 id="setup-heading">Start a practice quiz</h2><p>Choose a mode that works for you.</p></div></div>
         ${active ? `
           <div class="active-notice"><strong>Quiz in progress</strong><p>Question ${active.index + 1} of ${QUIZ_SIZE} · ${attemptMode(active)}</p></div>
-          <button type="button" class="primary full" data-action="resume">Resume quiz</button>
+          <div class="resume-actions">
+            <button type="button" class="primary" data-action="resume">Resume quiz</button>
+            <button type="button" class="secondary" data-action="reset">Start over</button>
+          </div>
         ` : `
           <form id="setup-form">
+            <label for="question-bank" class="bank-field"><span>Question bank</span>
+              <span class="select-wrap"><select id="question-bank" name="bank">
+                ${BANKS.map(bank => `<option value="${bank.id}" ${bank.id === selectedBankId ? 'selected' : ''}>${bank.name} · ${questionBanks.get(bank.id).length} questions</option>`).join('')}
+              </select>${icon('chevron')}</span>
+            </label>
             <fieldset class="mode-grid"><legend class="sr-only">Quiz mode</legend>
               ${modeOption('untimed', 'Untimed', 'Practice at your own pace.', 'infinity')}
               ${modeOption('timed', 'Timed', 'Work against the clock.', 'timer')}
@@ -178,7 +196,7 @@ function quizPage() {
   const nextLabel = position === attempt.questions.length ? 'View results' : 'Next question'
   return `<div class="quiz-shell">
     <section class="quiz-progress" aria-label="Quiz progress">
-      <div class="progress-top"><div><span class="subtle">${timed ? 'Timed quiz' : 'Untimed quiz'}</span><h1 id="page-title" tabindex="-1">Question ${position} of ${QUIZ_SIZE}</h1></div>
+      <div class="progress-top"><div><span class="subtle">${bankName(attempt)} · ${timed ? 'Timed quiz' : 'Untimed quiz'}</span><h1 id="page-title" tabindex="-1">Question ${position} of ${QUIZ_SIZE}</h1></div>
         <div class="quiz-clock" id="quiz-clock">${icon('timer')}<div><span>${timed ? 'Time remaining' : 'Time elapsed'}</span><strong id="clock-value" role="timer">${clockValue(attempt)}</strong></div></div></div>
       <progress value="${attempt.index + Number(resolved)}" max="${QUIZ_SIZE}" aria-label="Questions completed"></progress>
     </section>
@@ -407,6 +425,11 @@ function bindEvents() {
       case 'resume':
         if (!tick() && state.active) show('quiz', '#question-title')
         break
+      case 'reset':
+        state.active = null
+        persist()
+        show('home')
+        break
       case 'next':
         if (!tick() && state.active) advanceQuestion(state.active)
         break
@@ -419,6 +442,10 @@ function bindEvents() {
       mode = input.value
       document.querySelector('#duration-field').hidden = mode !== 'timed'
       document.querySelector('#setup-note').textContent = MODE_NOTES[mode]
+    } else if (input.id === 'question-bank') {
+      selectedBankId = input.value
+      state.selectedBankId = selectedBankId
+      persist()
     } else if (input.id === 'duration') {
       minutes = Number(input.value)
     } else if (input.name === 'option') {
@@ -433,7 +460,8 @@ function bindEvents() {
   main.addEventListener('submit', event => {
     event.preventDefault()
     if (event.target.id === 'setup-form' && !state.active) {
-      state.active = newAttempt(bank, mode === 'timed' ? minutes : null)
+      state.active = newAttempt(questionBanks.get(selectedBankId), mode === 'timed' ? minutes : null)
+      state.active.bankId = selectedBankId
       persist()
       show('quiz', '#question-title')
     } else if (event.target.id === 'answer-form' && state.active && !tick()) {
@@ -456,9 +484,11 @@ function bindEvents() {
 }
 
 try {
-  const response = await fetch(new URL('./data/questions.json', import.meta.url))
-  if (!response.ok) throw new Error('Question bank unavailable.')
-  bank = await response.json()
+  await Promise.all(BANKS.map(async bank => {
+    const response = await fetch(new URL(bank.file, import.meta.url))
+    if (!response.ok) throw new Error(`${bank.name} unavailable.`)
+    questionBanks.set(bank.id, await response.json())
+  }))
   view = state.active ? 'quiz' : 'home'
   if (!tick()) render()
   bindEvents()
